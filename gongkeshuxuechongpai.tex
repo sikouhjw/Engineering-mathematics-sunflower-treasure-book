@@ -1,0 +1,880 @@
+\documentclass[cn,11pt,fancy,hide]{elegantbook}
+\linespread{1.3}
+\usepackage{tabularx}
+\newcolumntype{Z}{>{\centering\arraybackslash}X}
+
+\setlist[enumerate]{leftmargin=0pt}
+
+\title{工科数学试卷汇总}
+\subtitle{高数、线代、概率、复变}
+
+\author{sikouhjw、xajzh}
+\institute{临时组织起来的重排小组}
+\date{\today}
+\version{1.00}
+
+\equote{“不论一个人的数学水平有多高, 只要对数学拥有一颗真诚的心, 他就在自己的心灵上得到了升华。”---SCIbird}
+
+\logo{logo}
+\cover{cover.jpg}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\Ln}{\mathrm{Ln\,}}
+\newcommand{\Res}{\,\mathrm{Res}}
+\newcommand{\LL}{\mathscr{L}}
+\newcommand{\EE}{\mathbb{E}\,}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+%\everymath{\displaystyle}
+
+\newcommand{\fourch}[4]{\\\begin{tabular}{*{4}{@{}p{4cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 一行
+\newcommand{\twoch}[4]{\\\begin{tabular}{*{2}{@{}p{8cm}}}(A)~#1 & (B)~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{8cm}}}(C)~#3 & (D)~#4\end{tabular}}  %两行
+\newcommand{\onech}[4]{\\(A)~#1 \\ (B)~#2 \\ (C)~#3 \\ (D)~#4}  % 四行
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+% \thispagestyle{empty}
+
+\mainmatter
+\hypersetup{pageanchor=true}
+\chapter{声明}
+本汇总不得用于商业用途, 最新版下载地址：\href{https://github.com/sikouhjw/LaTeX-learning-notes/tree/master/%E9%AB%98%E6%95%B0+%E7%BA%BF%E4%BB%A3+%E6%A6%82%E7%8E%87%E9%87%8D%E6%8E%92}{Github}, 不保证题目、答案的正确性, 如有错误可通过QQ群\footnote{991832226}或者邮箱\footnote{489765924@qq.com}联系我们
+
+\chapter{高等数学试卷汇总}
+
+\section{高数(一)期中}
+
+\subsection{2018-2019 A7}
+\subsubsection{选择题}
+\begin{enumerate}
+	\item 微分方程 $(y')^3+3\sqrt{y''}+x^4y'''=\sin x$ 的阶数是(\hspace{1pc})
+	\fourch{1}{4}{2}{3}
+	\item 设 $f(x,y)=x-y-\sqrt{x^2+y^2}$ , 则 $f_{x}(3,4)=$(\hspace{1pc})
+	\fourch{$\frac{3}{5}$}{$\frac{2}{5}$}{$-\frac{2}{5}$}{$\frac{1}{5}$}
+	\item 微分方程 $y'=\frac{y}{x}$ 的一个特解是(\hspace{1pc})
+	\fourch{$y=2x$}{$\ee^y=x$}{$y=x^2$}{$y=\ln x$}
+	\item 若 $z=\ln\sqrt{1+x^2+y^2}$ , 则 $\left.\dd z\right|_{(1,1)}=$(\hspace{1pc})
+	\fourch{$\frac{\dd x+\dd y}{3}$}{$\frac{\dd x+\dd y}{2}$}{$\frac{\dd x+\dd y}{1}$}{$3(\dd x+\dd y)$}
+	\item 设直线 $L:\begin{cases}
+	x+3y+2z+1=0\\
+	2x-y-10z+3=0
+	\end{cases}$ , 平面 $\eta:\ 4x-2y+z-2=0$ , 则(\hspace{1pc})
+	\fourch{$L$ 在 $\eta$ 上}{$L$ 平行于 $\eta$}{$L$ 垂直于 $\eta$}{$L$ 与 $\eta$ 斜交}
+	\item 方程 $y'+3xy=6x^2y$ 是(\hspace{1pc})
+	\twoch{二阶微分方程}{非线性微分方程}{一阶线性非齐次微分方程}{可分离变量的微分方程}
+	\item 曲面 $\frac{x^2}{9}-\frac{y^2}{4}+\frac{z^2}{4}=1$ 与平面 $x=y$ 的交线是(\hspace{1pc})
+	\fourch{两条直线}{双曲线}{椭圆}{抛物线}
+	\item 设 $z=\ee^{x^2y}$ , 则 $\frac{\partial^2z}{\partial x\partial y}=$(\hspace{1pc})
+	\twoch{$2y\left(1+x^3\right)\ee^{x^2y}$}{$\ee^{x^2y}$}{$2x\left(1+x^2y\right)\ee^{x^2y}$}{$2x\ee^{x^2y}$}
+	\item 下列结论正确的是(\hspace{1pc})
+	\twoch{$\vec{a}\times\left(\vec{b}-\vec{c}\right)=\vec{a}\times\vec{b}-\vec{a}\times\vec{c}$}{若 $\vec{a}\times\vec{b}=\vec{a}\times\vec{c}$ 且 $\vec{a}\ne\vec{0}$ , 则 $\vec{b}=\vec{c}$}{$\vec{a}\times\vec{b}=\vec{b}\times\vec{a}$}{若 $\left|\vec{a}\right|=1,\left|\vec{b}\right|=1$ , 则 $\left|\vec{a}\times\vec{b}\right|=1$}
+\end{enumerate}
+
+\subsubsection{填空题}
+\begin{enumerate}
+	\item 平面过点 $(2,0,0),(0,1,0),(0,0,0.5)$ , 则该平面的方程是\underline{\hspace{8pc}}
+	\item 设 $y_1$ 是 $y''+p(x)y'+q(x)y=f(x)$ 的解, $y_2$ 是 $y''+p(x)y'+q(x)y=f(x)$ 的解, 则 $y_1+y_2$ 是\underline{\hspace{8pc}}方程的解
+	\item 设 $z=y\arctan x$ , 则 $\left.\mathrm{grad}\,z\right|_{(1,2)}=$\underline{\hspace{8pc}}
+	\item 过点 $P(0,2,4)$ 且与两平面 $x+2z=1$ 和 $y-2z=2$ 平行的直线方程是\underline{\hspace{8pc}}
+	\item 设 $f(x,y)=\arcsin\frac{y}{x}$ , 则 $f_y(1,0)=$\underline{\hspace{8pc}}
+	\item $y=\ee^x$ 是微分方程 $y''+py'+6y=0$ 的一个特解, 则 $p=$\underline{\hspace{8pc}}
+	\item 已知平面 $\eta_1:\ A_1x+B_1y+C_1z+D_1=0$ 与平面 $\eta_2:\ A_2x+B_2y+C_2z+D_2=0$, 则 $\eta_1\perp\eta_2$ 的充要条件是\underline{\hspace{8pc}}
+	\item 微分方程 $y''+2y'+5y=0$ 的通解为 $y=$\underline{\hspace{8pc}}
+	\item 设 $z=\ee^{xy}+\cos\left(x^2+y\right)$, 则 $\frac{\partial z}{\partial y}=$\underline{\hspace{8pc}}
+\end{enumerate}
+\subsubsection{大题}
+\begin{enumerate}
+	\item 求方程 $\frac{\dd z}{\dd x}=-z+4x$ 的通解
+	\item 求曲线 $2z+1=\ln(xy)+\ee^z$ 在点 $M_{0}(1,1,0)$ 处的切平面和法线方程
+	\item 设由方程组 $\begin{cases}
+	x+y+z=0\\
+	x^2+y^2+z^2=1
+	\end{cases}$
+	确定了隐函数 $x=x(z),y=y(z)$ , 求 $\frac{\dd x}{\dd z},\frac{\dd y}{\dd z}$
+	\item 求方程 $y''+6y'+13y=\ee^t$ 的通解
+	\item 设 $z=x^2y+\sin x+\varphi(xy+1)$ , 且 $\varphi(u)$ 具有一阶连续导数, 求 $\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}$
+\end{enumerate}
+
+\subsection{2018-2019 A7答案}
+
+\subsubsection{选择题}
+\begin{enumerate}
+	\item 微分方程 $(y')^3+3\sqrt{y''}+x^4y'''=\sin x$ 的阶数是(\hspace{0.25pc}D\hspace{0.25pc})
+	\fourch{1}{4}{2}{3}
+	\item 设 $f(x,y)=x-y-\sqrt{x^2+y^2}$ , 则 $f_{x}(3,4)=$(\hspace{0.25pc}B\hspace{0.25pc})
+	\fourch{$\frac{3}{5}$}{$\frac{2}{5}$}{$-\frac{2}{5}$}{$\frac{1}{5}$}
+	\item 微分方程 $y'=\frac{y}{x}$ 的一个特解是(\hspace{0.25pc}A\hspace{0.25pc})
+	\fourch{$y=2x$}{$\ee^y=x$}{$y=x^2$}{$y=\ln x$}
+	\item 若 $z=\ln\sqrt{1+x^2+y^2}$ , 则 $\left.\dd z\right|_{(1,1)}=$(\hspace{0.25pc}A\hspace{0.25pc})
+	\fourch{$\frac{\dd x+\dd y}{3}$}{$\frac{\dd x+\dd y}{2}$}{$\frac{\dd x+\dd y}{1}$}{$3(\dd x+\dd y)$}
+	\item 设直线 $L:\begin{cases}
+	x+3y+2z+1=0\\
+	2x-y-10z+3=0
+	\end{cases}$ , 平面 $\eta:\ 4x-2y+z-2=0$ , 则(\hspace{0.25pc}C\hspace{0.25pc})
+	\fourch{$L$ 在 $\eta$ 上}{$L$ 平行于 $\eta$}{$L$ 垂直于 $\eta$}{$L$ 与 $\eta$ 斜交}
+	\item 方程 $y'+3xy=6x^2y$ 是(\hspace{0.25pc}D\hspace{0.25pc})
+	\twoch{二阶微分方程}{非线性微分方程}{一阶线性非齐次微分方程}{可分离变量的微分方程}
+	\item 曲面 $\frac{x^2}{9}-\frac{y^2}{4}+\frac{z^2}{4}=1$ 与平面 $x=y$ 的交线是(\hspace{0.25pc}B\hspace{0.25pc})
+	\fourch{两条直线}{双曲线}{椭圆}{抛物线}
+	\item 设 $z=\ee^{x^2y}$ , 则 $\frac{\partial^2z}{\partial x\partial y}=$(\hspace{0.25pc}C\hspace{0.25pc})
+	\twoch{$2y\left(1+x^3\right)\ee^{x^2y}$}{$\ee^{x^2y}$}{$2x\left(1+x^2y\right)\ee^{x^2y}$}{$2x\ee^{x^2y}$}
+	\item 下列结论正确的是(\hspace{0.25pc}A\hspace{0.25pc})
+	\twoch{$\vec{a}\times\left(\vec{b}-\vec{c}\right)=\vec{a}\times\vec{b}-\vec{a}\times\vec{c}$}{若 $\vec{a}\times\vec{b}=\vec{a}\times\vec{c}$ 且 $\vec{a}\ne\vec{0}$ , 则 $\vec{b}=\vec{c}$}{$\vec{a}\times\vec{b}=\vec{b}\times\vec{a}$}{若 $\left|\vec{a}\right|=1,\left|\vec{b}\right|=1$ , 则 $\left|\vec{a}\times\vec{b}\right|=1$}
+\end{enumerate}
+
+\subsubsection{填空题}
+\begin{enumerate}
+	\item 平面过点 $(2,0,0),(0,1,0),(0,0,0.5)$ , 则该平面的方程是\underline{\hspace{1pc}$\frac{x}{2}+y+2z=1$\hspace{1pc}}
+	\item 设 $y_1$ 是 $y''+p(x)y'+q(x)y=f(x)$ 的解, $y_2$ 是 $y''+p(x)y'+q(x)y=f(x)$ 的解, 则 $y_1+y_2$ 是\underline{\hspace{1pc}$y''+p(x)y'+q(x)y=2f(x)$\hspace{1pc}}方程的解
+	\item 设 $z=y\arctan x$ , 则 $\left.\mathrm{grad}\,z\right|_{(1,2)}=$\underline{\hspace{1pc}$\dd x+\frac{\uppi}{4}\dd y$\hspace{1pc}}
+	\item 过点 $P(0,2,4)$ 且与两平面 $x+2z=1$ 和 $y-2z=2$ 平行的直线方程是\underline{\hspace{1pc}$\frac{x}{-2}=\frac{y-2}{2}=\frac{z-4}{1}$\hspace{1pc}}
+	\item 设 $f(x,y)=\arcsin\frac{y}{x}$ , 则 $f_y(1,0)=$\underline{\hspace{1pc}$1$\hspace{1pc}}
+	\item $y=\ee^x$ 是微分方程 $y''+py'+6y=0$ 的一个特解, 则 $p=$\underline{\hspace{1pc}$-7$\hspace{1pc}}
+	\item 已知平面 $\eta_1:\ A_1x+B_1y+C_1z+D_1=0$ 与平面 $\eta_2:\ A_2x+B_2y+C_2z+D_2=0$, 则 $\eta_1\perp\eta_2$ 的充要条件是\underline{\hspace{1pc}$A_1A_2+B_1B_2+C_1C_2=0$\hspace{1pc}}
+	\item 微分方程 $y''+2y'+5y=0$ 的通解为 $y=$\underline{\hspace{1pc}$C_1\ee^{-x}\sin(2x)+C_2\ee^{-x}\cos(2x)$\hspace{1pc}}
+	\item 设 $z=\ee^{xy}+\cos\left(x^2+y\right)$, 则 $\frac{\partial z}{\partial y}=$\underline{\hspace{1pc}$x\ee^{xy}-\sin\left(x^2+y\right)$\hspace{1pc}}
+\end{enumerate}
+\subsubsection{大题}
+\begin{enumerate}
+	\item 求方程 $\frac{\dd z}{\dd x}=-z+4x$ 的通解
+	\begin{solution}
+		运用一阶线性非齐次微分方程公式, 得
+		\begin{align*}
+			z&=\ee^{-\int\dd x}\left( \int 4x\ee^{\int \dd x}\dd x+C\right) =\ee^{-x}\left( \int 4x\ee^{x}\dd x+C\right) \\
+			&=\ee^{-x}\left( 4(x-1)\ee^{x}+C\right) =4(x-1)+C\ee^{-x}
+		\end{align*}
+	\end{solution}
+	\item 求曲线 $2z+1=\ln(xy)+\ee^z$ 在点 $M_{0}(1,1,0)$ 处的切平面和法线方程
+	\item 设由方程组 $\begin{cases}
+	x+y+z=0\\
+	x^2+y^2+z^2=1
+	\end{cases}$
+	确定了隐函数 $x=x(z),y=y(z)$ , 求 $\frac{\dd x}{\dd z},\frac{\dd y}{\dd z}$
+	\begin{solution}
+		对方程组 $\begin{cases}
+		x+y+z=0\\
+		x^2+y^2+z^2=1
+		\end{cases}$ 两式求微分, 得
+		\begin{equation*}
+			\begin{cases}
+			\dd x+\dd y+\dd z=0\\
+			2x\dd x+2y\dd y+2z\dd z=0
+			\end{cases}
+		\end{equation*}
+		解得
+		\begin{equation*}
+			\begin{cases}
+			\frac{\dd x}{\dd z}=-\frac{x+2z}{2x+z}\\
+			\frac{\dd y}{\dd z}=-\frac{y+2x}{2y+z}
+			\end{cases}
+		\end{equation*}
+	\end{solution}
+	\item 求方程 $y''+6y'+13y=\ee^t$ 的通解
+	\begin{solution}
+		方程 $y''+6y'+13y=\ee^t$ 对应的齐次方程 $y''+6y'+13y=0$ 的特征方程为 $r^2+6r+13=0$ , 解得 $r=-3\pm2\ii$ , 那么齐次方程的通解为 $C_1\ee^{-3t}\sin(2t)+C_2\ee^{-3t}\cos(2t)$
+		
+		设特解为 $a\ee^{t}$ , 代入方程 $y''+6y'+13y=\ee^t$ 后解得 $a=\frac{1}{20}$
+		
+		综上, 方程 $y''+6y'+13y=\ee^t$ 的通解为 $C_1\ee^{-3t}\sin(2t)+C_2\ee^{-3t}\cos(2t)+\frac{\ee^x}{20}$
+	\end{solution}
+	\item 设 $z=x^2y+\sin x+\varphi(xy+1)$ , 且 $\varphi(u)$ 具有一阶连续导数, 求 $\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}$
+	\begin{solution}
+		$\frac{\partial z}{\partial x}=2xy+\cos x+y\varphi'(xy+1)$ , $\frac{\partial z}{\partial y}=x^2+x\varphi'(xy+1)$
+	\end{solution}
+\end{enumerate}
+
+
+
+\section{高数(一)期终}
+\subsection{2018-2019 A15}
+\subsection{2018-2019 A15答案}
+
+
+
+
+\section{高数(二)期中}
+\subsection{2017-2018}
+\subsection{2017-2018 答案}
+\subsection{2018-2019 B10}
+
+
+
+
+\section{高数(二)期终}
+\subsection{2014-2015}
+\subsubsection{选择题(每小题 $3$ 分, 共 $24$ 分)}
+\begin{enumerate}
+	\item 方程 $y''-3 y'+2 y=\ee^{x}$ 的待定特解 $y*$ 的一个形式是 $y*=$ (\hspace{1pc})
+	\fourch{$\ee^x$}{$ax^2\ee^x$}{$a\ee^x$}{$ax\ee^x$}
+	
+	\item 过点 $(3,1,-2)$ 且通过直线 $\frac{x-4}{5}=\frac{y+3}{2}=\frac{z}{1}$ 的平面方程 (\hspace{1pc})
+	\twoch{$5x+2y+z-15=0$}{$\frac{x-3}{8}=\frac{y-1}{-9}=\frac{z+2}{-22}$}{$8x-9y-22z-59=0$}{$\frac{x-3}{5}=\frac{y-1}{2}=\frac{z+2}{1}$}
+	
+	\item 设 $f(x,y)=\ln\left(x+\frac{y}{2x} \right)$ , 则 $f_{y}(1,0)=$ (\hspace{1pc})
+	\fourch{$1$}{$\frac{1}{2}$}{$\frac{1}{3}$}{$0$}
+	
+	\item $D=\{ (x,y)|0\leq x\leq 1,0\leq y\leq 2 \}$ , 利用二重积分的性质, $\iint_{D}\frac{1}{\sqrt{x^2+y^2+2xy+16}}\dd x\dd y$ 的最佳估值区间为 (\hspace{1pc})
+	\fourch{$\left[ \frac{2}{5},\frac{1}{2} \right]$}{$\left[ \frac{1}{5},\frac{1}{2} \right]$}{$\left[ \frac{2}{5},1 \right]$}{$\left[ \frac{1}{2},1 \right]$}
+	
+	\item $\Omega$ 由柱面 $x^2+y^2=1$ 、平面 $z=1$ 及三个坐标面围成的在第一卦限内的闭区域, 则 $\iiint_{\Omega}xy\dd V=$ (\hspace{1pc})
+	\twoch{$\int_{0}^{\uppi}\dd \theta\int_{0}^{1}\dd \rho\int_{0}^{1}\rho^3\sin\theta\cos\theta\dd z$}{$\int_{0}^{2\uppi}\int_{0}^{1}\dd\rho\int_{0}^{1}\rho^2\sin\theta\cos\theta\dd z$}{$\int_{0}^{\frac{\uppi}{2}}\dd \theta\int_{0}^{1}\dd\rho\int_{0}^{1}\rho^2\sin\theta\cos\theta\dd z$}{$\int_{0}^{\frac{\uppi}{2}} \dd \theta \int_{0}^{1} \dd \rho \int_{0}^{1} \rho^{3} \sin \theta \cos \theta \dd z$}
+	
+	\item 设 $L$ 是 $xoy$ 平面上的有向曲线, 下列曲线积分中, (\hspace{1pc}) 是与路径无关的
+	\twoch{$\int_{L} 3 y x^{2} \dd x+x^{3} \dd y$}{$\int_{L} y \dd x-x \dd y$}{$\int_{L} 2 x y \dd x-x^{2} \dd y$}{$\int_{L} 3 y x^{2} \dd x+y^{3} \dd y$}
+	
+	\item 设 $L$ 为圆周 $\begin{cases}
+	x=a\cos t\\
+	y=a\sin t
+	\end{cases}(0\leq t\leq 2\uppi)$ , 则 $\oint_{L}\left(x^{2}+y^{2}\right) \dd s=$ (\hspace{1pc})
+	\fourch{$a^3$}{$\uppi a^3$}{$2\uppi a^3$}{$3\uppi a^3$}
+	
+	\item 下列级数中收敛的是 (\hspace{1pc})
+	\fourch{$\sum_{n=1}^{\infty} \frac{n}{n+1}$}{$\sum_{n=1}^{\infty} \frac{1}{n \sqrt{n+1}}$}{$\sum_{n=1}^{\infty} \frac{1}{2(n+1)}$}{$\sum_{n=1}^{\infty} \frac{1}{\sqrt{n+1}}$}
+\end{enumerate}
+
+\subsubsection{填空题(每空 $3$ 分, 共 $24$ 分)}
+\begin{enumerate}
+	\item 微分方程 $\frac{\dd y}{\dd x}=-3 y+\ee^{2 x}$ 的通解是 $y=$\underline{\hspace{8pc}}
+	
+	\item 平行于 $y$ 轴且通过曲线 $\begin{cases}
+	x^{2}+y^{2}+4 z^{2}=1\\
+	x^{2}=y^{2}+z^{2}
+	\end{cases}$ 的柱面方程是\underline{\hspace{8pc}}
+	
+	\item 设 $z=x^{2} y+x y^{2}$ , 则 $\dd z=$\underline{\hspace{8pc}}
+	
+	\item $\iint_{D} y^{2} \sin ^{3} x \dd x \dd y=$\underline{\hspace{8pc}}(区域 $D$ 为: $-4 \leq x \leq 4,-1 \leq y \leq 1$ )
+	
+	\item 设 $D$ 为平面闭区域: $x^{2}+y^{2} \leq 1$ , 则 $\iint_{D} \sqrt{x^{2}+y^{2}} \dd x \dd y$ 化为极坐标系下二次积分的表达式为\underline{\hspace{8pc}}
+	
+	\item 设 $L$ 是任意一条分段光滑的有向闭曲线, 则 $\oint_{L} 2 x y \dd x+x^{2} \dd y=$\underline{\hspace{8pc}}
+	
+	\item $I=\iint_{\Sigma}(x+z \sin y) \dd y \dd z+(y+x \sin z) \dd z \dd x+z \dd x \dd y=$\underline{\hspace{8pc}}, 其中 $\Sigma$ 为球面 $x^{2}+y^{2}+z^{2}=4(z \geq 0)$ 与平面 $z=0$ 围成区域的表面, 取外侧.
+	
+	\item 级数 $\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} x^{n}$ 的收敛半径为\underline{\hspace{8pc}}
+\end{enumerate}
+
+\subsubsection{综合题(请写出求解过程, $8$ 小题, 共 $52$ 分)}
+\begin{enumerate}
+	\item 求过点 $(2,1,1)$ , 且与直线 $\begin{cases}
+	x-y+3 z-7=0\\
+	3 x+5 y-2 z+1=0
+	\end{cases}$ 垂直的平面方程. ( $6$ 分)
+	
+	\item 设 $z=f\left(\ee^{x+y}, \sin (x y)\right)$ , 且 $f$ 具有一阶连续偏导数, 求 $\frac{\partial z}{\partial x}, \frac{\partial z}{\partial y}$ . ( $6$ 分)
+	
+	\item 计算 $\iint_{D}\left(x^{2}+y\right) \dd x \dd y$ , $D$ 是曲线 $y=x^{2}, x=y^{2}$ 围成的闭区域. ( $8$ 分)
+	
+	\item 计算 $\iiint_{\Omega}\left(x^{2}+y^{2}\right) \dd x \dd y \dd z$ , 其中 $\Omega$ 是由圆锥面 $z^{2}=x^{2}+y^{2}$ 及平面 $z=2$ 围成的闭区域. ( $6$ 分)
+	
+	\item 计算 $\int_{\Gamma} x^{3} \dd x+3 z y^{2} \dd y-x^{2} y \dd z$ , 其中 $\Gamma$ 是从点 $A(2,2,1)$ 到原点 $O$ 的直线段 $AO$ . ( $6$ 分)
+	
+	\item 空间区域 $\Omega$ 由开口向下的旋转抛物面 $z=1-x^{2}-y^{2}$ 与平面 $z=0$ 所围, $\Omega$ 的表面取外侧为 $\Sigma$ , 利用高斯公式计算 $\oiint_{\Sigma} x^{2} y z^{2} \dd y \dd z-x y^{2} z^{2} \dd z \dd x+z(1+x y z) \dd x \dd y$ . ( $8$ 分)
+	
+	\item 判断级数 $\sum_{n=1}^{\infty} \frac{n^{\ee}}{\ee^{n}}$ 的敛散性. ( $6$ 分)
+	
+	\item 求幂级数 $\sum_{n=0}^{\infty}(2 n+1) x^{2 n}(x \in(-1,1))$ 的和函数. ( $6$ 分)
+\end{enumerate}
+
+
+\subsection{2014-2015 答案}
+
+\subsection{2017-2018 A}
+\subsubsection{选择题(每小题 $3$ 分, 共 $24$ 分)}
+\begin{enumerate}
+	\item 微分方程 $y''-6 y'+9 y=\left(6 x^{2}+2\right) \ee^{x}$ 的待定特解的一个形式可为 (\hspace{1pc})
+	\twoch{$y^{*}=\left(a x^{2}+b x+c\right) \ee^{x}$}{$y^{*}=x\left(a x^{2}+b x+c\right) \ee^{x}$}{$y^{*}=x^{2}\left(a x^{2}+b x+c\right) \ee^{x}$}{$y^{*}=x^{2}\left(x^{2}+1\right) \ee^{x}$}
+	
+	\item 设向量 $\vec{a}$ 的三个方向角为 $\alpha$ 、 $\beta$ 、 $\gamma$ , 且已知 $\alpha=60^{\circ}$ 、 $\beta=120^{\circ}$ , 则 $\gamma=$ (\hspace{1pc})
+	\fourch{$120^{\circ}$}{$60^{\circ}$}{$45^{\circ}$}{$30^{\circ}$}
+	
+	\item 设 $z=\arctan \ee^{x y}$ , 则 $\frac{\partial z}{\partial y}=$ (\hspace{1pc})
+	\fourch{$-\frac{x \ee^{x y}}{\sqrt{1-\ee^{2 x y}}}$}{$\frac{x \ee^{x y}}{\sqrt{1-\ee^{2 x y}}}$}{$-\frac{x \ee^{x y}}{1+\ee^{2 x y}}$}{$\frac{x \ee^{x y}}{1+\ee^{2 x y}}$}
+	
+	\item $D$ 为平面区域 $x^{2}+y^{2} \leq 4$ , 利用二重积分的性质, $\iint_{D}\left(x^{2}+4 y^{2}+9\right) \dd x \dd y$ 的最佳估值区间为 (\hspace{1pc})
+	\fourch{$[36 \uppi, 52 \uppi]$}{$[36 \uppi, 100 \uppi]$}{$[52 \uppi, 100 \uppi]$}{$[9 \uppi, 25 \uppi]$}
+	
+	\item 设 $\Omega=\left\{(x, y, z) | x^{2}+y^{2}+z^{2} \leq 2, x \geq 0\right\}$ , 则以下等式错误的是 (\hspace{1pc})
+	\fourch{$\iiint_{\Omega} x^{2} y \dd v=0$}{$\iiint_{\Omega}(x+y) \dd v=0$}{$\iiint_{\Omega} z \dd v=0$}{$\iiint_{\Omega} x y \dd v=0$}
+	
+	\item 设 $L$ 为直线 $y=y_0$ 上从点 $A(0,y_0)$ 到点 $B(3,y_0)$ 的有向直线段, 则 $\int_{L} 2 \dd y=$ (\hspace{1pc})
+	\fourch{$6$}{$6y_0$}{$3y_0$}{$0$}
+	
+	\item $\Sigma$ 为平面 $x+y+z=1$ 与三坐标面所围区域表面的外侧, 则 $\iint_{\Sigma}(2 y+3 z) \dd y \dd z+(x+2 z) \dd z \dd x+(y+1) \dd x \dd y=$ (\hspace{1pc})
+	\fourch{$0$}{$\frac{1}{6}$}{$\frac{2}{3}$}{$\frac{5}{3}$}
+	
+	\item 交错级数 $\sum_{n=1}^{\infty}(-1)^{n-1} \frac{1}{3^{n-1}}$ (\hspace{1pc})
+	\fourch{发散}{条件收敛}{绝对收敛}{无法确定}
+\end{enumerate}
+
+\subsubsection{填空题(每空 $3$ 分,共 $24$ 分)}
+\begin{enumerate}
+	\item 以 $y_{1}=\ee^{x}, y_{2}=x \ee^{x}$ 为特解的阶数最低的常系数齐次线性微分方程是\underline{\hspace{8pc}}
+	
+	\item 直线 $L:\begin{cases}
+	x=3t-2\\
+	y=t+2\\
+	z=2t-1
+	\end{cases}$ 和平面 $\pi:\ 2 x+3 y+3 z-8=0$ 的交点是\underline{\hspace{8pc}}
+	
+	\item 设 $z=xy^3$ , 则 $\dd z=$\underline{\hspace{8pc}}
+	
+	\item 交换二次积分的积分次序后, $\int_{0}^{2} \dd y \int_{y^{2}}^{2 y} f(x, y) \dd x=$\underline{\hspace{8pc}}
+	
+	\item 设 $\Omega=\{-1 \leq x \leq 1,-1 \leq y \leq 3,0 \leq z \leq 2\}$ , 则 $\iiint_{\Omega} \dd x \dd y \dd z=$\underline{\hspace{8pc}}
+	
+	\item 设 $L$ 为由三点 $(0,0),(3,0),(3,2)$ 围成的平面区域 $D$ 的正向边界曲线, 由格林公式知 $\int_{L}(3 x-y+4) \dd x+(5 y+3 x-6) \dd y=$\underline{\hspace{8pc}}
+	
+	\item 设 $\Sigma$ 是上半圆锥面 $z=\sqrt{x^{2}+y^{2}}(0 \leq z \leq 1)$ , 则曲面积分 $\iint_{\Sigma}\left(x^2+y^2\right)\dd S=$\underline{\hspace{8pc}}
+	
+	\item 级数 $\sum_{n=1}^{\infty}\left(\frac{1}{n(n+1)}-\frac{1}{2^{n}}\right)$ 的和为\underline{\hspace{8pc}}
+\end{enumerate}
+
+\subsubsection{综合题( $8$ 小题, 共 $52$ 分)}
+\begin{enumerate}
+	\item 求方程 $\frac{\dd y}{\dd x}=\frac{x y}{1+x^{2}}$ 的通解. ( $6$ 分)
+	
+	\item 设 $z=\ln \left(x^{2}-y\right)$ , 而 $y=\tan x$ , 求 $\frac{\dd z}{\dd x}$ . ( $6$ 分)
+	
+	\item 计算 $\iint_{D}\left(x^{2}+y^{2}\right) \dd x \dd y$ , $D$ 为曲线 $x^{2}-2 x+y^{2}=0, y=0$ 围成的在第一象限的闭区域. ( $6$ 分)
+	
+	\item 计算三重积分 $\iiint_{\Omega} z \dd x \dd y \dd z$ , 其中 $\Omega$ 是由圆锥面 $z=\sqrt{x^{2}+y^{2}}$ 与球面 $z=\sqrt{2-x^{2}-y^{2}}$ 围成的区域. ( $6$ 分)
+	
+	\item 用高斯公式计算 $\oiint_{\Sigma}\left(a^{2} x+x^{3}\right) \dd y \dd z+y^{3} \dd z \dd x+z^{3} \dd x \dd y$ , 其中 $\Sigma$ 为球面 $x^{2}+y^{2}+z^{2}=a^{2}$ , 取外侧. ( $8$ 分)
+	
+	\item 用格林公式计算 $\oint_{C} x^{2} y \dd x-x y^{2} \dd y$ , 其中 $C$ 为圆周 $x^2+y^2=4$ , 取正向. ( $8$ 分)
+	
+	\item 判断级数 $\sum_{n=1}^{\infty} \frac{1}{2^{n-1}(2 n-1)}$ 的敛散性. ( $6$ 分)
+	
+	\item 在区间 $(-1,1)$ 内求幂级数 $\sum_{n=1}^{\infty} \frac{x^{n}}{n}$ 的和函数 $s(x)$ . ( $6$ 分)
+\end{enumerate}
+
+
+\subsection{2017-2018 A答案}
+\subsection{2017-2018 B}
+\subsection{2017-2018 B答案}
+
+\section{额外的练习}
+
+
+\chapter{线性代数试卷汇总}
+
+
+
+
+
+
+
+
+\chapter{概率统计试卷汇总}
+
+\section{2018-2019 14B}
+\subsubsection{选择题(每题 $3$ 分, 共 $21$ 分)}
+\begin{enumerate}
+	\item 从 $0,1,2,\ldots,9$ 中任意选出 $3$ 个不同的数字, 三个数字中不含 $0$ 与 $5$ 的概率是 (\hspace{1pc})
+	\fourch{$\frac{1}{15}$}{$\frac{2}{15}$}{$\frac{14}{15}$}{$\frac{7}{15}$}
+	
+	\item 某人射击中靶的概率为 $\frac{3}{4}$ . 若射击直到中靶为止, 则射击次数为 $3$ 的概率为 (\hspace{1pc})
+	\fourch{$\left(\frac{3}{4}\right)^3$}{$\left(\frac{1}{4}\right)^2\times\frac{3}{4}$}{$\left(\frac{1}{4}\right)^3$}{$\left(\frac{3}{4}\right)^2\times\frac{1}{4}$}
+	
+	\item 设随机变量 $X$ 的概率密度 $f(x)$ 满足 $f(-x)=f(x)$ , $F(x)$ 是分布函数, 则 (\hspace{1pc})
+	\twoch{$F(-a)=1-F(a)$}{$F(-a)=\frac{1}{2}F(a)$}{$F(-a)=F(a)$}{$F(-a)=\frac{1}{2}-F(a)$}
+	
+	\item 设二维随机变量 $(X,Y)$ 的分布律为 $P\left\{X=i,Y=j\right\}=c\cdot i\cdot j,i=1,2,3,j=1,2,3$ , 则 $c=$ (\hspace{1pc})
+	\fourch{$\frac{1}{12}$}{$\frac{1}{3}$}{$\frac{1}{36}$}{$\frac{1}{2}$}
+	
+	\item 设随机变量 $X$ 服从均匀分布, 其概率密度为 $f(x)=
+	\begin{cases}
+	\frac{1}{2}, & 1<x<3\\
+	0, & \text{其他}
+	\end{cases}
+	$ , 则 $D(X)=$ (\hspace{1pc})
+	\fourch{$3$}{$\frac{1}{3}$}{$\frac{1}{2}$}{$2$}
+	
+	\item 设总体 $X\sim N\left(0,\sigma^2\right)$ , $X_1,X_2,\ldots,X_n$ 是总体 $X$ 的一个样本, $\overline{X},S^2$ 分别为样本均值和样本方差, 则下列样本函数中, 服从 $\chi^2(n)$ 分布的是 (\hspace{1pc})
+	\fourch{$\sum_{i=1}^{n}X_i^2$}{$\frac{\overline{X}}{S/\sqrt{n-1}}$}{$\frac{(n-1)S^2}{\sigma^2}$}{$\frac{1}{\sigma^2}\sum_{i=1}^{n}X_i^2$}
+	
+	\item 设 $X_1,X_2,\ldots,X_n$ 是来自正态总体 $N\left(\mu,\sigma^2\right)$ 的一个样本, $\sigma^2$ 未知, $\overline{X}$是样本均值, $S^2=\frac{1}{n-1}\sum_{i=1}^{n}\left(X_i-\overline{X}\right)^2$ , 如果 $\overline{X}-k\frac{S}{\sqrt{n}}$ 是 $\mu$ 的置信度为 $1-\alpha$ 的单侧置信下限, 则 $k$ 应取 (\hspace{1pc})
+	\fourch{$t_{1-\alpha}(n)$}{$t_{\alpha}(n)$}{$t_{\alpha}(n-1)$}{$t_{\alpha/2}(n-1)$}	
+\end{enumerate}
+
+\subsubsection{填空题(每题 $3$ 分, 共 $21$ 分)}
+\begin{enumerate}
+	\item 设 $A,B$ 为随机事件, $P(A)=0.8$ , $P(A-B)=0.3$ , 则 $P\left(\overline{AB}\right)=$\underline{\hspace{8pc}}
+	
+	\item 设随机变量 $X$ 的分布律为 $P\left\{x=k\right\}=c(0.5)^k,k=1,2,3,\ldots$ , 则常数 $c=$\underline{\hspace{8pc}}
+	
+	\item 设随机变量 $X$ 的概率密度为 $f(x)=
+	\begin{cases}
+	3x^2, & 0<x<1\\
+	0, & \text{其他}
+	\end{cases}
+	$ , 则 $P\left\{\left|X\right|<0.2\right\}=$\underline{\hspace{8pc}}
+	
+	\item 设随机变量 $X$ 的概率密度为 $f(x)=
+	\begin{cases}
+	\frac{1}{c}, & 0<x<c\\
+	0, & \text{其他}
+	\end{cases}
+	$ , 则 $\EE(X)=$\underline{\hspace{8pc}}
+	
+	\item 设二维随机变量 $(X,Y)$ 的概率密度为
+	\begin{equation*}
+		f(x,y)=
+		\begin{cases}
+		\sin x\cdot\cos y, & 0<x<\uppi/2,\ 0<y<\uppi/2\\
+		0, & \text{其他}
+		\end{cases}
+		,
+	\end{equation*}
+	
+	则 $P\left\{0<X<\uppi/4,\uppi/4<Y<\uppi/2\right\}=$\underline{\hspace{8pc}}
+	
+	\item 设随机变量 $X$ 的数学期望 $\EE(X)=\mu$ , 方差 $D(X)=\sigma^2$ , 则由切比雪夫不等式有 $P\{|X-\mu|\geq3\sigma\}\leq$\underline{\hspace{8pc}}
+	
+	\item 设 $X_1,X_2$ 是取自正态总体 $X\sim N\left(\mu,\sigma^2\right)$ 的一个容量为 $2$ 的样本, 则 $\mu$ 的无偏估计量 $\hat\mu_1=\frac{1}{2}X_1+\frac{1}{2}X_2$ , $\hat\mu_2=\frac{2}{3}X_1+\frac{1}{3}X_2$ , $\hat\mu_3=\frac{1}{4}X_1+\frac{3}{4}X_2$ 中最有效的是\underline{\hspace{8pc}}
+\end{enumerate}
+
+\subsubsection{解答题(共 $58$ 分)}
+\begin{enumerate}
+	\item ( $10$ 分)车间里有甲、乙、丙 $3$ 台机床生产同一种产品, 已知它们的次品率依次是 $0.05$ 、 $0.1$ 、 $0.2$ , 产品所占份额依次是 $20\%$ 、 $30\%$ 、 $50\%$ . 现从产品中任取 $1$ 件, 发现它是次品, 求次品来自机床乙的概率.
+	
+	\item ( $10$ 分)设随机变量 $X$ 的分布函数为 $F(x)=
+	\begin{cases}
+	k-k\ee^{-x^3}, & x>0\\
+	0, & x\leq0
+	\end{cases}
+	$ , 试求:
+	\begin{enumerate}
+		\item[(1)] 常数 $k$ ;
+		\item[(2)] $X$ 的概率密度 $f(x)$ .
+	\end{enumerate}
+
+	\item ( $10$ 分)设二维随机变量 $(X,Y)$ 的概率密度为:
+	\begin{equation*}
+		f(x,y)=
+		\begin{cases}
+		\frac{1}{4}, & 2\leq x\leq4,1\leq y\leq3\\
+		0, & \text{其他}
+		\end{cases},
+	\end{equation*}
+	试求 $(X,Y)$ 关于 $X$ 与 $Y$ 的边缘概率密度 $f_X(x)$ 与 $f_Y(y)$ , 并判断 $X$ 与 $Y$ 是否相互独立.
+	
+	\item ( $10$ 分)已知红黄两种番茄杂交的第二代结红果的植株与结黄果的植株的比率为 $3:1$ , 现种植杂交种 $400$ 株, 试用中心极限定理近似计算, 结红果的植株介于 $285$ 与 $315$ 之间的概率. $\left(\varPhi\left(\sqrt{3}\right)=0.9582,\varPhi\left(\sqrt{2}\right)=0.9207\right)$
+	
+	\item ( $8$ 分)设二维随机变量 $(X,Y)$ 的分布律为
+	\begin{center}
+		\begin{tabularx}{0.8\textwidth}{ZZZZ}
+			\hline
+			 & \multicolumn{3}{c}{$Y$}\\
+			\cline{2-4}
+			$X$ & $-1$ & $0$ & $1$\\
+			\hline
+			$-1$ & $\frac{1}{8}$ & $\frac{1}{8}$ & $\frac{1}{8}$\\
+			$0$ & $\frac{1}{8}$ & $0$ & $\frac{1}{8}$\\
+			$1$ & $\frac{1}{8}$ & $\frac{1}{8}$ & $\frac{1}{8}$\\
+			\hline
+		\end{tabularx}
+	\end{center}
+	求 $\mathrm{Cov}(X,Y)$ .
+	
+	\item ( $10$ 分)设 $X_1,X_2,\ldots,X_n$ 为总体 $X$ 的一个样本, 总体 $X$ 的概率密度为:
+	\begin{equation*}
+		f(x)=
+		\begin{cases}
+		(\alpha+1)x^\alpha, & 0<x<1\\
+		0, & \text{其他}
+		\end{cases},
+	\end{equation*}
+	求未知参数 $\alpha$ 的矩估计.
+\end{enumerate}
+
+\section{2018-2019 14B答案}
+\subsubsection{选择题(每题 $3$ 分, 共 $21$ 分)}
+\begin{enumerate}
+	\item 从 $0,1,2,\ldots,9$ 中任意选出 $3$ 个不同的数字, 三个数字中不含 $0$ 与 $5$ 的概率是 (\hspace{0.25pc}D\hspace{0.25pc})
+	\fourch{$\frac{1}{15}$}{$\frac{2}{15}$}{$\frac{14}{15}$}{$\frac{7}{15}$}
+	
+	\item 某人射击中靶的概率为 $\frac{3}{4}$ . 若射击直到中靶为止, 则射击次数为 $3$ 的概率为 (\hspace{0.25pc}B\hspace{0.25pc})
+	\fourch{$\left(\frac{3}{4}\right)^3$}{$\left(\frac{1}{4}\right)^2\times\frac{3}{4}$}{$\left(\frac{1}{4}\right)^3$}{$\left(\frac{3}{4}\right)^2\times\frac{1}{4}$}
+	
+	\item 设随机变量 $X$ 的概率密度 $f(x)$ 满足 $f(-x)=f(x)$ , $F(x)$ 是分布函数, 则 (\hspace{0.25pc}A\hspace{0.25pc})
+	\twoch{$F(-a)=1-F(a)$}{$F(-a)=\frac{1}{2}F(a)$}{$F(-a)=F(a)$}{$F(-a)=\frac{1}{2}-F(a)$}
+	
+	\item 设二维随机变量 $(X,Y)$ 的分布律为 $P\left\{X=i,Y=j\right\}=c\cdot i\cdot j,i=1,2,3,j=1,2,3$ , 则 $c=$ (\hspace{0.25pc}C\hspace{0.25pc})
+	\fourch{$\frac{1}{12}$}{$\frac{1}{3}$}{$\frac{1}{36}$}{$\frac{1}{2}$}
+	
+	\item 设随机变量 $X$ 服从均匀分布, 其概率密度为 $f(x)=
+	\begin{cases}
+	\frac{1}{2}, & 1<x<3\\
+	0, & \text{其他}
+	\end{cases}
+	$ , 则 $D(X)=$ (\hspace{0.25pc}B\hspace{0.25pc})
+	\fourch{$3$}{$\frac{1}{3}$}{$\frac{1}{2}$}{$2$}
+	
+	\item 设总体 $X\sim N\left(0,\sigma^2\right)$ , $X_1,X_2,\ldots,X_n$ 是总体 $X$ 的一个样本, $\overline{X},S^2$ 分别为样本均值和样本方差, 则下列样本函数中, 服从 $\chi^2(n)$ 分布的是 (\hspace{0.25pc}D\hspace{0.25pc})
+	\fourch{$\sum_{i=1}^{n}X_i^2$}{$\frac{\overline{X}}{S/\sqrt{n-1}}$}{$\frac{(n-1)S^2}{\sigma^2}$}{$\frac{1}{\sigma^2}\sum_{i=1}^{n}X_i^2$}
+	
+	\item 设 $X_1,X_2,\ldots,X_n$ 是来自正态总体 $N\left(\mu,\sigma^2\right)$ 的一个样本, $\sigma^2$ 未知, $\overline{X}$是样本均值, $S^2=\frac{1}{n-1}\sum_{i=1}^{n}\left(X_i-\overline{X}\right)^2$ , 如果 $\overline{X}-k\frac{S}{\sqrt{n}}$ 是 $\mu$ 的置信度为 $1-\alpha$ 的单侧置信下限, 则 $k$ 应取 (\hspace{0.25pc}C\hspace{0.25pc})
+	\fourch{$t_{1-\alpha}(n)$}{$t_{\alpha}(n)$}{$t_{\alpha}(n-1)$}{$t_{\alpha/2}(n-1)$}	
+\end{enumerate}
+
+\subsubsection{填空题(每题 $3$ 分, 共 $21$ 分)}
+\begin{enumerate}
+	\item 设 $A,B$ 为随机事件, $P(A)=0.8$ , $P(A-B)=0.3$ , 则 $P\left(\overline{AB}\right)=$\underline{\hspace{1pc}$0.5$\hspace{1pc}}
+	
+	\item 设随机变量 $X$ 的分布律为 $P\left\{x=k\right\}=c(0.5)^k,k=1,2,3,\ldots$ , 则常数 $c=$\underline{\hspace{1pc}$1$\hspace{1pc}}
+	
+	\item 设随机变量 $X$ 的概率密度为 $f(x)=
+	\begin{cases}
+	3x^2, & 0<x<1\\
+	0, & \text{其他}
+	\end{cases}
+	$ , 则 $P\left\{\left|X\right|<0.2\right\}=$\underline{\hspace{1pc}$\frac{1}{125}$\hspace{1pc}}
+	
+	\item 设随机变量 $X$ 的概率密度为 $f(x)=
+	\begin{cases}
+	\frac{1}{c}, & 0<x<c\\
+	0, & \text{其他}
+	\end{cases}
+	$ , 则 $\EE(X)=$\underline{\hspace{1pc}$\frac{c}{2}$\hspace{1pc}}
+	
+	\item 设二维随机变量 $(X,Y)$ 的概率密度为
+	\begin{equation*}
+	f(x,y)=
+	\begin{cases}
+	\sin x\cdot\cos y, & 0<x<\uppi/2,\ 0<y<\uppi/2\\
+	0, & \text{其他}
+	\end{cases}
+	,
+	\end{equation*}
+	
+	则 $P\left\{0<X<\uppi/4,\uppi/4<Y<\uppi/2\right\}=$\underline{\hspace{1pc}$\left( \frac{2-\sqrt{2}}{2} \right)^2$\hspace{1pc}}
+	
+	\item 设随机变量 $X$ 的数学期望 $\EE(X)=\mu$ , 方差 $D(X)=\sigma^2$ , 则由切比雪夫不等式有 $P\{|X-\mu|\geq3\sigma\}\leq$\underline{\hspace{1pc}$\frac{1}{9}$\hspace{1pc}}
+	
+	\item 设 $X_1,X_2$ 是取自正态总体 $X\sim N\left(\mu,\sigma^2\right)$ 的一个容量为 $2$ 的样本, 则 $\mu$ 的无偏估计量 $\hat\mu_1=\frac{1}{2}X_1+\frac{1}{2}X_2$ , $\hat\mu_2=\frac{2}{3}X_1+\frac{1}{3}X_2$ , $\hat\mu_3=\frac{1}{4}X_1+\frac{3}{4}X_2$ 中最有效的是\underline{\hspace{1pc}$\hat\mu_1$\hspace{1pc}}
+\end{enumerate}
+
+\subsubsection{解答题(共 $58$ 分)}
+\begin{enumerate}
+	\item ( $10$ 分)车间里有甲、乙、丙 $3$ 台机床生产同一种产品, 已知它们的次品率依次是 $0.05$ 、 $0.1$ 、 $0.2$ , 产品所占份额依次是 $20\%$ 、 $30\%$ 、 $50\%$ . 现从产品中任取 $1$ 件, 发现它是次品, 求次品来自机床乙的概率.
+	\begin{solution}
+		设抽取的产品为次品的事件为 $A$ , 抽取的次品来自机床甲的事件为 $B_1$ , 抽取的次品来自机床乙的事件为 $B_2$ , 抽取的次品来自机床丙的事件为 $B_3$ .
+		
+		根据全概率公式
+		\begin{equation*}
+			\begin{aligned}
+			P(A)&=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+P(A|B_3)P(B_3)\\
+			&=0.05\times0.2+0.1\times0.3+0.2\times0.5=0.14
+			\end{aligned}
+		\end{equation*}
+		根据贝叶斯公式
+		\begin{equation*}
+			P(B_2|A)=\frac{P(AB_2)}{P(A)}=\frac{P(A|B_2)P(B_2)}{P(A)}=\frac{0.1\times0.3}{0.14}=\frac{3}{14}
+		\end{equation*}
+	\end{solution}
+	
+	\item ( $10$ 分)设随机变量 $X$ 的分布函数为 $F(x)=
+	\begin{cases}
+	k-k\ee^{-x^3}, & x>0\\
+	0, & x\leq0
+	\end{cases}
+	$ , 试求:
+	\begin{enumerate}
+		\item[(1)] 常数 $k$ ;
+		\item[(2)] $X$ 的概率密度 $f(x)$ .
+	\end{enumerate}
+    \begin{solution}
+	  \begin{enumerate}
+		\item[(1)] 根据分布函数的性质 $\lim_{x\to+\infty}F(x)=k=1$
+		\item[(2)] $F(x)=
+		\begin{cases}
+		1-\ee^{-x^3}, & x>0\\
+		0, & x\leq0 
+		\end{cases}
+		$ , 则$f(x)=F'(x)=
+		\begin{cases}
+		3x^2\ee^{-x^3}, & x>0\\
+		0, & x\leq0
+		\end{cases}
+		$
+	  \end{enumerate}
+    \end{solution}
+
+	\item ( $10$ 分)设二维随机变量 $(X,Y)$ 的概率密度为:
+	\begin{equation*}
+	f(x,y)=
+	\begin{cases}
+	\frac{1}{4}, & 2\leq x\leq4,1\leq y\leq3\\
+	0, & \text{其他}
+	\end{cases},
+	\end{equation*}
+	试求 $(X,Y)$ 关于 $X$ 与 $Y$ 的边缘概率密度 $f_X(x)$ 与 $f_Y(y)$ , 并判断 $X$ 与 $Y$ 是否相互独立.
+	\begin{solution}
+		$f_X(x)=\int_{-\infty}^{+\infty}f(x,y)\dd y=
+		\begin{cases}
+		\int_{1}^{3}\frac{1}{4}\dd y, & 2\leq x\leq4\\
+		0, & \text{其它}
+		\end{cases}=\begin{cases}
+		\frac{1}{2}, & 2\leq x\leq4\\
+		0, & \text{其它}
+		\end{cases}
+		$
+		
+		同理 $f_Y(y)=
+		\begin{cases}
+		\frac{1}{2}, & 1\leq y\leq3\\
+		0, & \text{其它}
+		\end{cases}
+		$ , $f_X(x)f_Y(y)=
+		\begin{cases}
+		\frac{1}{4}, & 2\leq x\leq4,1\leq y\leq 3\\
+		0, & \text{其它}
+		\end{cases}=f(x,y)
+		$
+		
+		因此 $X$ 与 $Y$ 相互独立
+	\end{solution}
+	
+	\item ( $10$ 分)已知红黄两种番茄杂交的第二代结红果的植株与结黄果的植株的比率为 $3:1$ , 现种植杂交种 $400$ 株, 试用中心极限定理近似计算, 结红果的植株介于 $285$ 与 $315$ 之间的概率. $\left(\varPhi\left(\sqrt{3}\right)=0.9582,\varPhi\left(\sqrt{2}\right)=0.9207\right)$
+	\begin{solution}
+		设结红果的植株的株数为 $X$ , $X\sim B(400,3/4)$ , 则 $\EE(X)=300$ , $D(X)=75$
+		
+		根据中心极限定理
+			\begin{align*}
+			 P(285\leq X\leq 315)&=P\left(\frac{-15}{\sqrt{75}}\leq\frac{X-300}{\sqrt{75}}\leq\frac{15}{\sqrt{75}}\right)=\varPhi\left(\sqrt{3}\right)-\varPhi\left(-\sqrt{3}\right)\\
+			&=2\varPhi\left(\sqrt{3}\right)-1=0.9164
+			\end{align*}
+	\end{solution}
+	
+	\item ( $8$ 分)设二维随机变量 $(X,Y)$ 的分布律为
+	\begin{center}
+		\begin{tabularx}{0.8\textwidth}{ZZZZ}
+			\hline
+			& \multicolumn{3}{c}{$Y$}\\
+			\cline{2-4}
+			$X$ & $-1$ & $0$ & $1$\\
+			\hline
+			$-1$ & $\frac{1}{8}$ & $\frac{1}{8}$ & $\frac{1}{8}$\\
+			$0$ & $\frac{1}{8}$ & $0$ & $\frac{1}{8}$\\
+			$1$ & $\frac{1}{8}$ & $\frac{1}{8}$ & $\frac{1}{8}$\\
+			\hline
+		\end{tabularx}
+	\end{center}
+	求 $\mathrm{Cov}(X,Y)$ .
+	\begin{solution}
+		$\EE(X)=-1\times\frac{3}{8}+1\times\frac{3}{8}=0$ , 同理通过计算得 $\EE(Y)=0$ , $\EE(XY)=0$
+		
+		因此 $\text{Cov}(X,Y)=\EE(XY)-\EE(X)\EE(Y)=0$
+	\end{solution}
+	
+	\item ( $10$ 分)设 $X_1,X_2,\ldots,X_n$ 为总体 $X$ 的一个样本, 总体 $X$ 的概率密度为:
+	\begin{equation*}
+	f(x)=
+	\begin{cases}
+	(\alpha+1)x^\alpha, & 0<x<1\\
+	0, & \text{其他}
+	\end{cases},
+	\end{equation*}
+	求未知参数 $\alpha$ 的矩估计.
+	\begin{solution}
+		$\EE(X)=\int_{0}^{1}(\alpha+1)x^{\alpha+1}\dd x=\frac{\alpha+1}{\alpha+2}$ , $\mu_1=\overline{X}=\sum_{i=1}^{n}\frac{X_i}{n}$ , 因此 $\alpha=\frac{2\overline{X}-1}{1-\overline{X}}$
+	\end{solution}
+\end{enumerate}
+
+
+
+
+
+
+\chapter{复变函数试卷汇总}
+
+\section{2018-2019A}
+\subsubsection{选择题(每小题 $3$ 分, 共 $15$ 分)}
+\begin{enumerate}
+	\item $\frac{(\sqrt{3}-\ii)^{4}}{(1-\ii)^{8}}=$ (\hspace{1pc})
+	\twoch{$-\frac{1}{2}+\frac{\sqrt{3}}{2}\ii$}{$-\frac{1}{8}\left(1+\sqrt{3}\ii\right)$}{$\frac{1}{8}\left(-1+\sqrt{3} \ii\right)$}{$-\frac{1}{2}-\frac{\sqrt{3}}{2} \ii$}
+	
+	\item 设 $f(z)=2 x^{3}+3 y^{3} \ii$ , 则 $f(z)$ (\hspace{1pc})
+	\twoch{处处不可导}{仅在 $6x^2=9y^2$ 上可导, 处处不解析}{处处解析}{仅在 $(0,0)$ 点可导}
+	
+	\item 下列等式正确的是 (\hspace{1pc})
+	\twoch{$\Ln \mathrm{i}=\left(2 k \uppi-\frac{\uppi}{2}\right) \ii, \ln \ii=\frac{\uppi}{2} \ii$}{$\Ln \ii=\left( 2k\uppi+\frac{\uppi}{2}\right)\ii,\ln\ii=-\frac{\uppi}{2}\ii $}{$\Ln \ii=\left(2 k \uppi+\frac{\uppi}{2}\right) \ii, \ln \ii=\frac{\uppi}{2} \ii$}{$\Ln \ii=\left(2 k \uppi-\frac{\uppi}{2}\right) \ii, \ln \ii=-\frac{\uppi}{2} \ii$}
+	
+	\item $z=0$ 是函数 $\frac{1-\cos z}{z-\sin z}$ 的 (\hspace{1pc})
+	\fourch{本性奇点}{可去奇点}{二级极点}{一级极点}
+	
+	\item 设 $\mathrm{C}$ 为 $z=(1-\ii)t$ , $t$ 从 $1$ 到 $0$ 的一段, 则 $\int_{\mathrm{C}} \overline{z} \dd z=$ (\hspace{1pc})
+	\fourch{$-1$}{$1$}{$-\ii$}{$\ii$}
+\end{enumerate}
+
+\subsubsection{填空题(每小题 $3$ 分, 共 $15$ 分)}
+\begin{enumerate}
+	\item 若 $z+|z|=2+\ii$ , 则 $z=$\underline{\hspace{8pc}}
+	
+	\item 若 $\mathrm{C}$ 为正向圆周 $|z|=\frac{1}{2}$ , 则 $\oint_{\mathrm{C}} \frac{1}{z-2} \dd z=$\underline{\hspace{8pc}}
+	
+	\item 若 $z=2-\uppi\ii$ , 则 $\ee^{z}=$\underline{\hspace{8pc}}
+	
+	\item 若 $f(z)=\cos z^2$ , 则 $f(z)$ 在 $z=0$ 处泰勒展开式中 $z^4$ 项的系数 $a_4=$\underline{\hspace{8pc}}
+	
+	\item 函数 $f(t)=\sin t$ 的拉普拉斯变换 $F(s)=$\underline{\hspace{8pc}}
+\end{enumerate}
+
+\subsubsection{计算题(70分)}
+\begin{enumerate}
+	\item 设 $u(x,y)=x-2xy$ 且 $f(0)=0$ , 求解析函数 $f(z)=u+\ii v$ . ( $10$ 分)
+	
+	\item 计算积分 $\oint_{\mathrm{C}}\frac{2\ee^x}{z^5}\dd z$ 的值, 其中 $\mathrm{C}$ 为正向圆周 $|z|=1$ . ( $7$ 分)
+	
+	\item 计算积分 $\oint_{\mathrm{C}}\frac{3z+5}{z^2-z}\dd z$ 的值, 其中 $\mathrm{C}$ 为正向圆周 $|z|=\frac{1}{2}$ . ( $7$ 分)
+	
+	\item 求函数 $\frac{1-\cos z}{z^3}$ 在有限奇点处的留数. ( $7$ 分)
+	
+	\item 求函数 $\frac{2z^2+1}{z^2+2z}$ 在有限奇点处的留数. ( $7$ 分)
+	
+	\item 将 $f(z)=\frac{z}{(z-2)(z-6)}$ 在 $2<|z|<6$ 内展开为洛朗级数. ( $10$ 分)
+	
+	\item 若函数 $f(z)=a y^{3}+b x^{2} y+\ii\left(x^{3}+c x y^{2}\right)$ 是复平面上的解析函数, 求 $a,b,c$ 的值. ( $12$ 分)
+	
+	\item 利用拉普拉斯变换解常微分方程初值问题: $\begin{cases}
+	x''(t)+6x'(t)+9x(t)=\ee^{-3t}\\
+	x(0)=0, x'(0)=0
+	\end{cases}$ . ( $10$ 分)
+\end{enumerate}
+
+
+
+\section{2018-2019A答案}
+\subsubsection{选择题(每小题 $3$ 分, 共 $15$ 分)}
+\begin{enumerate}
+	\item $\frac{(\sqrt{3}-\ii)^{4}}{(1-\ii)^{8}}=$ (\hspace{0.25pc}D\hspace{0.25pc})
+	\twoch{$-\frac{1}{2}+\frac{\sqrt{3}}{2}\ii$}{$-\frac{1}{8}\left(1+\sqrt{3}\ii\right)$}{$\frac{1}{8}\left(-1+\sqrt{3} \ii\right)$}{$-\frac{1}{2}-\frac{\sqrt{3}}{2} \ii$}
+	
+	\item 设 $f(z)=2 x^{3}+3 y^{3} \ii$ , 则 $f(z)$ (\hspace{0.25pc}B\hspace{0.25pc})
+	\twoch{处处不可导}{仅在 $6x^2=9y^2$ 上可导, 处处不解析}{处处解析}{仅在 $(0,0)$ 点可导}
+	
+	\item 下列等式正确的是 (\hspace{0.25pc}C\hspace{0.25pc})
+	\twoch{$\Ln \mathrm{i}=\left(2 k \uppi-\frac{\uppi}{2}\right) \ii, \ln \ii=\frac{\uppi}{2} \ii$}{$\Ln \ii=\left( 2k\uppi+\frac{\uppi}{2}\right)\ii,\ln\ii=-\frac{\uppi}{2}\ii $}{$\Ln \ii=\left(2 k \uppi+\frac{\uppi}{2}\right) \ii, \ln \ii=\frac{\uppi}{2} \ii$}{$\Ln \ii=\left(2 k \uppi-\frac{\uppi}{2}\right) \ii, \ln \ii=-\frac{\uppi}{2} \ii$}
+	
+	\item $z=0$ 是函数 $\frac{1-\cos z}{z-\sin z}$ 的 (\hspace{0.25pc}D\hspace{0.25pc})
+	\fourch{本性奇点}{可去奇点}{二级极点}{一级极点}
+	
+	\item 设 $\mathrm{C}$ 为 $z=(1-\ii)t$ , $t$ 从 $1$ 到 $0$ 的一段, 则 $\int_{\mathrm{C}} \overline{z} \dd z=$ (\hspace{0.25pc}A\hspace{0.25pc})
+	\fourch{$-1$}{$1$}{$-\ii$}{$\ii$}
+\end{enumerate}
+
+\subsubsection{填空题(每小题 $3$ 分, 共 $15$ 分)}
+\begin{enumerate}
+	\item 若 $z+|z|=2+\ii$ , 则 $z=$\underline{\hspace{1pc}$\frac{3}{4}+\ii$\hspace{1pc}}
+	
+	\item 若 $\mathrm{C}$ 为正向圆周 $|z|=\frac{1}{2}$ , 则 $\oint_{\mathrm{C}} \frac{1}{z-2} \dd z=$\underline{\hspace{1pc}$0$\hspace{1pc}}
+	
+	\item 若 $z=2-\uppi\ii$ , 则 $\ee^{z}=$\underline{\hspace{1pc}$-\ee^2$\hspace{1pc}}
+	
+	\item 若 $f(z)=\cos z^2$ , 则 $f(z)$ 在 $z=0$ 处泰勒展开式中 $z^4$ 项的系数 $a_4=$\underline{\hspace{1pc}$-\frac{1}{2}$\hspace{1pc}}
+	
+	\item 函数 $f(t)=\sin t$ 的拉普拉斯变换 $F(s)=$\underline{\hspace{1pc}$\frac{1}{s^2+1}$\hspace{1pc}}
+\end{enumerate}
+
+\subsubsection{计算题(70分)}
+\begin{enumerate}
+	\item 设 $u(x,y)=x-2xy$ 且 $f(0)=0$ , 求解析函数 $f(z)=u+\ii v$ . ( $10$ 分)
+	\begin{solution}
+		解析函数的 $u,v$ 必定满足 $\mathrm{C}.-\mathrm{R}.$ 方程, 即
+		\begin{equation*}
+			\begin{cases}
+			\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}\\
+			\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}
+			\end{cases}
+		\end{equation*}
+		$\frac{\partial v}{\partial y}=\frac{\partial u}{\partial x}=1-2 y$ , $\frac{\partial v}{\partial y}$ 对 $y$ 积分得 $v=y-y^{2}+\varphi(x)$
+		
+		$\frac{\partial u}{\partial y}=-2 x=-\frac{\partial v}{\partial x}=-\varphi^{\prime}(x)$ , 可以得出 $\varphi(x)=x^{2}+C$
+		
+		由于 $f(0)=0$ , 因此 $C=0$ ,即 $f(z)=x-2 x y+\ii\left(y-y^{2}+x^{2}\right)$
+	\end{solution}
+	
+	\item 计算积分 $\oint_{\mathrm{C}}\frac{2\ee^x}{z^5}\dd z$ 的值, 其中 $\mathrm{C}$ 为正向圆周 $|z|=1$ . ( $7$ 分)
+	\begin{solution}
+		根据高阶导数公式 $f^{(n)}(z_0)=\frac{n!}{2\uppi\ii}\oint_{\mathrm{C}}\frac{f(z)}{(z-z_0)^{n+1}}\dd z$ , 那么
+		\begin{equation*}
+			\oint_{\mathrm{C}} \frac{2 \ee^{z}}{(z-0)^{5}} \dd z=\frac{2 \uppi \ii}{4 !}\left.\left(2 \ee^{z}\right)^{(4)}\right|_{z=0}=\frac{\uppi \ii}{6}
+		\end{equation*}
+	\end{solution}
+	
+	\item 计算积分 $\oint_{\mathrm{C}}\frac{3z+5}{z^2-z}\dd z$ 的值, 其中 $\mathrm{C}$ 为正向圆周 $|z|=\frac{1}{2}$ . ( $7$ 分)
+	\begin{solution}
+		\begin{equation*}
+			\oint_{\mathrm{C}}\frac{3z+5}{z^2-z}\dd z=2\uppi\ii\underset{z=0}{\Res}\frac{3z+5}{z(z-1)}=2\uppi\ii\left.\frac{3z+5}{z-1}\right|_{z=0}=-10\uppi\ii
+		\end{equation*}
+	\end{solution}
+	
+	\item 求函数 $\frac{1-\cos z}{z^3}$ 在有限奇点处的留数. ( $7$ 分)
+	\begin{solution}
+		对 $\cos z$ 进行洛朗展开, $\cos z=1+\sum_{n=1}^{\infty}(-1)^n\frac{z^{2n}}{(2n)!}$ , 那么 $1-\cos z=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n}}{(2n)!}$
+		
+		那么 $\frac{1-\cos z}{z^3}=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n-3}}{(2n)!}$ , 根据洛朗系数公式, $\underset{z=0}{\Res}\frac{1-\cos z}{z^3}=c_{-1}=\frac{1}{2}$
+	\end{solution}
+	
+	\item 求函数 $\frac{2z^2+1}{z^2+2z}$ 在有限奇点处的留数. ( $7$ 分)
+	\begin{solution}
+		\begin{equation*}
+			\underset{z=0}{\Res}\frac{2z^2+1}{z^2+2z}=\left.\frac{2z^2+1}{z+2} \right|_{z=0}=\frac{1}{2} , 
+			\underset{z=-2}{\Res}\frac{2z^2+1}{z^2+2z}=\left.\frac{2z^2+1}{z}\right|_{z=-2}=-\frac{9}{2}
+		\end{equation*}
+		
+	\end{solution}
+	
+	\item 将 $f(z)=\frac{z}{(z-2)(z-6)}$ 在 $2<|z|<6$ 内展开为洛朗级数. ( $10$ 分)
+	\begin{solution}
+		\begin{align*}
+			f(z)&=\frac{z}{4}\left( \frac{1}{z-6}-\frac{1}{z-2}\right) =\frac{z}{4}\left( -\frac{1}{6}\frac{1}{1-z/6}-\frac{1}{z}\frac{1}{1-2/z}\right) \\
+			&=\frac{z}{4}\left( -\frac{1}{6}\sum_{n=0}^{\infty}(z/6)^n-\frac{1}{z}\sum_{n=0}^{\infty}(2/z)^n\right)\\
+			&=-\frac{1}{4}\left( \sum_{n=0}^{\infty}(z/6)^{n+1}+\sum_{n=0}^{\infty}(2/z)^n\right)  
+		\end{align*}
+	\end{solution}
+	
+	\item 若函数 $f(z)=a y^{3}+b x^{2} y+\ii\left(x^{3}+c x y^{2}\right)$ 是复平面上的解析函数, 求 $a,b,c$ 的值. ( $12$ 分)
+	\begin{solution}
+		若 $f(z)$ 为解析函数, 则其实部、虚部满足 $\mathrm{C}.-\mathrm{R}.$ 方程, 设 $u=ay^3+bx^2y$ , $v=x^3+cxy^2$ , 则有
+		\begin{equation*}
+			\begin{cases}
+			\frac{\partial u}{\partial x}=2 b x y=2 c x y=\frac{\partial v}{\partial y}\\
+			\frac{\partial u}{\partial y}=3 a y^{2}+b x^{2}=-3 x^{2}-c y^{2}=-\frac{\partial v}{\partial x}
+			\end{cases}
+		\end{equation*}
+		解得\begin{equation*}
+			\begin{cases}
+			a=1\\
+			b=c=-3
+			\end{cases}
+		\end{equation*}
+		
+	\end{solution}
+	
+	\item 利用拉普拉斯变换解常微分方程初值问题: $\begin{cases}
+	x''(t)+6x'(t)+9x(t)=\ee^{-3t}\\
+	x(0)=0, x'(0)=0
+	\end{cases}$ . ( $10$ 分)
+	\begin{solution}
+		设 $\LL[x]=X(s)$ , 对等式两边作拉普拉斯变换
+		\begin{align*}
+			\LL[x''+6x'+9x]&=s^2X(s)-sx(0)-x'(0)+6sX(s)-6x(0)+9X(s)\\
+			&=s^2X(s)+6sX(s)+9X(s)=\frac{1}{s+3}
+		\end{align*}
+		那么有 $X(s)=\frac{1}{(s+3)^3}$ , 根据拉普拉斯变换的微分性质 $F''(s)=\LL[t^2f(t)]$
+		\begin{equation*}
+			\frac{1}{(s+3)^3}=\frac{1}{2}\left(\frac{1}{s+3} \right)''=\frac{\LL[t^2\ee^{-3t}]}{2}
+		\end{equation*}
+		那么 $x(t)=\frac{t^2\ee^{-3t}}{2}$
+	\end{solution}
+\end{enumerate}
+
+
+\end{document}
