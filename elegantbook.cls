@@ -99,8 +99,8 @@
 \let\intop\relax\let\sumop\relax\let\ointop\relax\let\prodop\relax
 \DeclareMathSymbol{\sumop}{\mathop}{CMlargesymbols}{"50}
 \DeclareMathSymbol{\intop}{\mathop}{CMlargesymbols}{"52}
-\DeclareMathSymbol{\ointop}{\mathop}{CMlargesymbols}{"49}
-\DeclareMathSymbol{\prodop}{\mathop}{CMlargesymbols}{"59}
+\DeclareMathSymbol{\ointop}{\mathop}{CMlargesymbols}{"48}
+\DeclareMathSymbol{\prodop}{\mathop}{CMlargesymbols}{"51}
 
 % \let\partial\relax
 % \DeclareMathSymbol{\partial}{\mathord}{CMletters}{"40}%
