@@ -1,0 +1,20 @@
+\linespread{1.3}%1.3倍行距
+\usepackage{tabularx}
+\newcolumntype{Z}{>{\centering\arraybackslash}X}%设置 Z 居中的效果
+\setlist[enumerate]{leftmargin=0pt}%设置列表环境左边的间距
+\newcommand{\ee}{\mathrm{e}}%常见符号
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\Ln}{\mathrm{Ln\,}}
+\newcommand{\Res}{\,\mathrm{Res}}
+\newcommand{\LL}{\mathscr{L}}
+\newcommand{\EE}{\mathbb{E}\,}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+%\everymath{\displaystyle}
+
+%排选择题
+\newcommand{\fourch}[4]{\\\begin{tabular}{*{4}{@{}p{4cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 一行
+\newcommand{\twoch}[4]{\\\begin{tabular}{*{2}{@{}p{8cm}}}(A)~#1 & (B)~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{8cm}}}(C)~#3 & (D)~#4\end{tabular}}  %两行
+\newcommand{\onech}[4]{\\(A)~#1 \\ (B)~#2 \\ (C)~#3 \\ (D)~#4}  % 四行
