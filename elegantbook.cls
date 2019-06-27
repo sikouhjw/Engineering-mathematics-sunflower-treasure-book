@@ -265,7 +265,7 @@
 \newcommand*{\eitemii}{\tikz \draw [baseline, fill=structurecolor,draw=none,circular drop shadow] circle (2pt);}
 \newcommand*{\eitemiii}{\tikz \draw [baseline, fill=structurecolor,draw=none] circle (2pt);}
 \setlist[enumerate,1]{label=\color{structurecolor}\arabic*.}
-\setlist[enumerate,2]{label=\color{structurecolor}(\alph*).}
+\setlist[enumerate,2]{label=\color{structurecolor}(\arabic*)}
 \setlist[enumerate,3]{label=\color{structurecolor}\Roman*.}
 \setlist[enumerate,4]{label=\color{structurecolor}\Alph*.}
 \setlist[itemize,1]{label={\eitemi}}
