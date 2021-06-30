@@ -1,34 +1,166 @@
-\documentclass[cn,11pt,fancy,hide]{elegantbook}
-\input{definition.tex}
+\documentclass[fontset=sikou,punct=kaiming]{ctexbook}
+\usepackage{xeCJKfntef}
+\setcounter{secnumdepth}{4}
+\ctexset{
+	subsubsection=
+	{
+		numbering = true,
+		name = {,、},
+		number = \chinese{subsubsection},
+		aftername = {\hspace{0pt}}
+	},
+}
+\usepackage[a4paper,inner=1.5cm,textwidth=46\ccwd,top=2cm,bottom=2cm]{geometry}
+\setlength{\headheight}{13pt}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{calc,xcolor}
+\newcommand{\progressbar}[2]{%
+  \textcolor{black}{\rule{0.6\textwidth * \real{#1} / \real{#2}}{1.5ex}}%
+	\textcolor{black!30}{\rule{0.6\textwidth - 0.6\textwidth * \real{#1} / \real{#2}}{1.5ex}}%
+}
 
-\title{「工科数学」葵花宝典}
-\subtitle{高数、线代、概率、复变}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\sffamily \booktitle}
+\fancyhead[ER]{\sffamily \leftmark}
+\fancyhead[OL]{\sffamily \rightmark}
+\fancyhead[EL,OR]{\sffamily\thepage}
 
-\author{sikouhjw、xajzh、jdldxk}
-\institute{Emstbook}
-\date{\today}
-\version{1.00}
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\cfoot{\sffamily\thepage}
+	\renewcommand\headrulewidth{0pt}
+	\renewcommand\footrulewidth{0pt}
+}
+\makeatletter
+\fancypagestyle{myfancy}{
+	\pagestyle{fancy}
+	\fancyhead[C]{\sffamily \booktitle}
+	\fancyhead[ER]{\sffamily \leftmark}
+	\fancyhead[OL]{\sffamily \rightmark}
+	\fancyhead[EL,OR]{\sffamily\thepage}
+	\fancyfoot[EC]{%
+		\@ifundefined{lastpage@lastpage}{%
+		\progressbar{\thepage}{100}%
+		}{%
+		\progressbar{\thepage}{\lastpage@lastpage}%
+		}%
+	}
+	\fancyfoot[OC]{\sffamily\fbox{仅供学习使用，严禁商业使用。此版本为第~\version{} 版，若想查看是否为最新版，去看 QQ: 2098881095 的空间}}
+}
+\makeatother
+\usepackage[toc]{multitoc}
+\usepackage{amsmath,amsthm}
+\usepackage[partial=upright]{unicode-math}
+\usepackage{physics,siunitx}
+\setmainfont{XITS}
+\setmathfont[StylisticSet = 8]{XITS Math}
+\usepackage{sourcesanspro,sourcecodepro}
+\newtheoremstyle{titi}
+	{5pt}%
+	{5pt}%
+	{}%
+	{0pt}%
+	{\bfseries}%
+	{}%
+	{0pt}%
+	{\thmname{#1}\thmnumber{#2}\thmnote{（#3）}}%
+\theoremstyle{titi}
+\newtheorem{ti}{}[subsubsection]
+\renewcommand{\theti}{\arabic{ti}．}
+\newtheorem*{solution}{解}
+% \usepackage{ntheorem}
+% {
+% 	\theoremstyle{nonumberplain}
+% 	\theoremheaderfont{\bfseries}
+% 	\theorembodyfont{\normalfont}
+% 	\newtheorem{solution}{解}
+% }
+% {
+% 	\theoremstyle{change}
+% 	\theoremheaderfont{\bfseries}
+% 	\theorembodyfont{\normalfont}
+% 	\newtheorem{ti}{}[subsubsection]
+% }
+% \renewcommand{\theti}{\arabic{ti}.}
+\usepackage{tabularx,multirow}
+\newcolumntype{Z}{>{\centering\arraybackslash}X}
+\usepackage[hidelinks,bookmarksopen=true,bookmarksnumbered=true]{hyperref}
+\usepackage{bookmark}
+\newcommand{\ee}{\symup e}
+\newcommand{\ii}{\symup i}
+\DeclareMathOperator{\Ln}{Ln}
+\newcommand{\LL}{\symscr{L}}
+\newcommand{\EE}{\symbb{E}\,}
+\newcommand{\bA}{\symbfit A}
+\newcommand{\bB}{\symbfit B}
+\newcommand{\bC}{\symbfit C}
+\newcommand{\bD}{\symbfit D}
+\newcommand{\bE}{\symbfit E}
+\newcommand{\bX}{\symbfit X}
+\newcommand{\astt}{*}
+\newcommand{\balpha}{\symbfit \alpha}
+\newcommand{\bbeta}{\symbfit \beta}
+\newcommand{\TT}{\mathrm{T}}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Prj}{Prj}
+% \makeatletter
+% \let\mycases={\cases}
+% \newenvironment{mycases}{%
+%   \matrix@check\mycases\let\@ifnextchar\new@ifnextchar%
+%   \left\lbrace%
+%   \def\arraystretch{1.2}%
+%   \array{@{}l}%
+% }{%
+%   \endarray\right.%
+% }
+% \makeatother
+\def\theenumi{\arabic{enumi}}
+\def\labelenumi{(\theenumi)}
+\def\kuo{\mbox{(\hspace{\ccwd})}}
+\def\kuoA{(\nobreak\makebox[\ccwd]{A}\nobreak)}
+\def\kuoB{(\nobreak\makebox[\ccwd]{B}\nobreak)}
+\def\kuoC{(\nobreak\makebox[\ccwd]{C}\nobreak)}
+\def\kuoD{(\nobreak\makebox[\ccwd]{D}\nobreak)}
+\def\hua{\CJKunderline*[hidden = true]{瞻彼阕者虚室生白}}
+\def\huaa#1{\underline{ #1 }}
+\long\def\guanggao{
+	\vspace*{\fill}
+	\begin{center}\thispagestyle{empty}
+		广告位招租
+	\end{center}
+	\vspace*{\fill}
+}
+\setlength{\lineskip}{2.5pt}
+\setlength{\lineskiplimit}{2.5pt}
+\renewcommand\arraystretch{1.2}
 
-\equote{“不论一个人的数学水平有多高, 只要对数学拥有一颗真诚的心, 他就在自己的心灵上得到了升华。”---SCIbird}
+\input{choice.tex}
+\def\onech{\fourch}
+\def\twoch{\fourch}
+\def\booktitle{JXUST 工科数学复习宝典}
+\def\version{1.04}
 
-\logo{logo}
-\cover{cover.jpg}
-
-
+\title{\booktitle（第~\version{} 版）}
+\author{电气 173 何骏炜}
 \begin{document}
-\maketitle
-\tableofcontents
-
-% \thispagestyle{empty}
-
-\mainmatter
-\hypersetup{pageanchor=true}
-
-
-\input{chapter/chap0.tex}
-\input{chapter/chap1.tex}
-\input{chapter/chap2.tex}
-\input{chapter/chap3.tex}
-\input{chapter/chap4.tex}
-
+	\frontmatter
+	\pdfbookmark{标题页}{title}
+	\maketitle
+	\input{chapter/chap0.tex}
+	\tableofcontents
+	\bookmark[dest=\HyperLocalCurrentHref, level=chapter]{目录}
+	\newpage
+	\guanggao
+	\mainmatter
+	\pagestyle{myfancy}
+	\input{chapter/chap1.tex}
+	\input{chapter/chap2.tex}
+	\input{chapter/chap3.tex}
+	\input{chapter/chap4.tex}
+	\backmatter
+	\input{chapter/chap5.tex}
 \end{document}

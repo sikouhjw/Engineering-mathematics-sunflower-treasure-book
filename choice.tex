@@ -1,0 +1,51 @@
+\usepackage{calc,ifthen}
+
+\newlength{\choicelengtha}
+\newlength{\choicelengthb}
+\newlength{\choicelengthc}
+\newlength{\choicelengthd}
+\newlength{\choicelengthe}
+\newlength{\maxlength}
+
+\makeatletter
+\newcommand{\fourch}[4]{
+  \par
+  \settowidth{\choicelengtha}{A．#1}
+  \settowidth{\choicelengthb}{B．#2}
+  \settowidth{\choicelengthc}{C．#3}
+  \settowidth{\choicelengthd}{D．#4}
+  \ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
+  \ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
+  \ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}
+  \ifthenelse{\lengthtest{\maxlength>0.8\linewidth}}
+  {%
+    \noindent%
+    \begin{tabular}{@{}p{\linewidth}@{}}
+      \setlength\tabcolsep{0pt}
+      \@hangfrom{\textsf A．}#1 \\
+      \@hangfrom{\textsf B．}#2 \\
+      \@hangfrom{\textsf C．}#3 \\
+      \@hangfrom{\textsf D．}#4 \\
+    \end{tabular}
+  }%
+  {%
+    \ifthenelse{\lengthtest{\maxlength>0.22\linewidth}}
+    {%
+      \noindent%
+      \begin{tabular}{@{}p{0.48\linewidth}@{\hspace*{0.04\linewidth}}p{0.48\linewidth}@{}}
+        \setlength\tabcolsep{0pt}
+        \@hangfrom{\textsf A．}#1 & \@hangfrom{\textsf B．}#2 \\
+        \@hangfrom{\textsf C．}#3 & \@hangfrom{\textsf D．}#4 \\
+      \end{tabular}
+    }%
+    {%
+      \noindent%
+      \begin{tabular}{@{}*{3}{p{0.22\linewidth}@{\hspace*{0.04\linewidth}}}p{0.22\linewidth}@{}}
+        \setlength\tabcolsep{0pt}
+        \@hangfrom{\textsf A．}#1  & \@hangfrom{\textsf B．}#2 & \@hangfrom{\textsf C．}#3 & \@hangfrom{\textsf D．}#4 \\
+      \end{tabular}
+    }%
+  }%
+  \unskip\unskip
+}
+\makeatother

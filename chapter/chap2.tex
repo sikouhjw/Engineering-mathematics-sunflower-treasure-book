@@ -1,1 +1,482 @@
-\chapter{线性代数试卷汇总}
+\chapter{《线性代数》试卷汇总}
+\section{秋}
+\subsection{2018-2019 B}
+\subsubsection{选择题}
+\begin{ti}
+	行列式 $\begin{vmatrix}
+		0 & a & 0 & 0 \\
+		b & c & 0 & 0 \\
+		0 & 0 & e & d \\
+		0 & 0 & 0 & f
+	\end{vmatrix}$ 的值为 \kuo
+	\fourch{$abcdef$}{$abcdf$}{$-abef$}{$cdf$}
+\end{ti}
+
+\begin{ti}
+	设 $\bA$ 为 $n$ 阶非对称方阵, 则下列不是对称矩阵的是 \kuo
+	\fourch{$\bA \bA^{\TT}$}{$\bA - \bA^{\TT}$}{$\bA + \bA^{\TT}$}{$\bA \bA^{\TT}$}
+\end{ti}
+
+\begin{ti}
+	若 $n$ 个 $m$ 维向量线性无关, 则 \kuo
+	\twoch{去掉一个向量后仍线性无关}{再增加一个向量后也线性无关}{其中只有一个向量不能被其他向量线性表示}{$n > m$}
+\end{ti}
+
+\begin{ti}
+	设 $\bA = (a_{ij})_{m \times n}$, 且 $\bA$ 的行列式 $|\bA| = 0$, 但 $\bA$ 中存在某元素的代数余子式非零, 则齐次线性方程组 $\bA \bX = \symbfit 0$ 的基础解系中解向量个数为 \kuo
+	\fourch{$k$}{$l$}{$1$}{$n$}
+\end{ti}
+
+\begin{ti}
+	设 $\bA$ 为 $n$ 阶矩阵, 以下结论中, \kuo{} 成立
+	\onech{$\bA$ 的特征向量的线性组合仍为特征向量}{$\bA$ 的特征向量即为齐次方程 $(\lambda \bE - \bA) \bX = \symbfit 0$ 的全部解}{$\bA$ 与 $\bA^{\TT}$ 有相同特征向量}{矩阵 $\bA$ 的属于特征值 $\lambda$ 的特征向量也是矩阵 $\bA^{2}$ 的属于特征值 $\lambda^{2}$ 的特征向量}
+\end{ti}
+
+\begin{ti}
+	下列结论错误的是 \kuo
+	\onech{同一矩阵相同特征值对应特征向量必定线性无关}{若几阶方阵有几个互不相同的特征值, 则该矩阵必可对角化}{相似矩阵的特征值相同, 特征多项式也相同}{若几阶方阵有几个线性无关的特征向量, 则该矩阵必可对角化}
+\end{ti}
+
+\subsubsection{填空题}
+\begin{ti}
+	设 $\bA$ 为 $4$ 阶方阵, 且 $|\bA| = 3$, 则 $|-2 \bA| = $ \hua
+\end{ti}
+
+\begin{ti}
+	行列式 $\begin{vmatrix}
+		2 & 1 & -4 \\
+		1 & 3 & 2 \\
+		-3 & 1 & 5
+	\end{vmatrix}$ 的元素 $a_{21} = 1$ 的代数余子式 $\bA_{21} = $ \hua
+\end{ti}
+
+\begin{ti}
+	设向量 $(2,-3,4)$ 与向量 $(-4,6,a)$ 线性相关, 则 $a = $ \hua
+\end{ti}
+
+\begin{ti}
+	设 $\bA$ 为 $3$ 阶方阵, 且 $|\bA| = 4$, 则 $\bigl|\bA^{\TT} \bA\bigr| = $ \hua
+\end{ti}
+
+\begin{ti}
+	设 $\balpha = (1,1,1,1)^{\TT}$, 则向量 $\balpha$ 的长度 $\| \balpha \| = $ \hua
+\end{ti}
+
+\begin{ti}
+	设 $\bA$ 为 $m \times n$ 矩阵, $\symbfit B$ 为 $\bA \bX = \symbfit b$ 所对应的增广矩阵, 则 $\bA \bX = \symbfit b$ 有唯一解的充分必要条件是 \hua
+\end{ti}
+
+\begin{ti}
+	已知方阵 $n$ 个特征值 $\lambda_{1},\lambda_{2},\cdots,\lambda_{n}$, 则 $\bigl|\bA^{2}\bigr| = $ \hua
+\end{ti}
+
+\subsubsection{大题}
+\begin{ti}
+	计算 $\begin{vmatrix}
+		1 & 2 & 3 & 4 \\
+		3 & 2 & 6 & -2 \\
+		4 & 3 & 0 & -1 \\
+		3 & 0 & 0 & 0
+	\end{vmatrix}$
+\end{ti}
+
+\begin{ti}
+	用分块法求矩阵 $\bA = \begin{pmatrix}
+		1 & 0 & 0 & 0 \\
+		0 & 1 & 4 & 0 \\
+		0 & 0 & -1 & 0 \\
+		0 & 0 & 0 & 8
+	\end{pmatrix}$ 的逆矩阵 $\bA^{-1}$
+\end{ti}
+
+\begin{ti}
+	求向量组 $\balpha_{1} = (1,1,4,3)^{\TT},\balpha_{2} = (1,-1,-2,5)^{\TT},\balpha_{3} = (-3,2,3,-14)^{\TT},\balpha_{4} = (1,3,10,1)^{\TT}$ 的秩及最大无关组
+\end{ti}
+
+\begin{ti}
+	求 $\bA = \begin{bmatrix}
+		2 & -2 & 0 \\
+		-2 & 1 & -2 \\
+		0 & -2 & 0
+	\end{bmatrix}$ 的特征值和特征向量
+\end{ti}
+
+\begin{ti}
+	求线性方程组 $\begin{cases}
+		2x_{1} + 3x_{2} + x_{3} = 1 \\
+		x_{1} + x_{2} - 2x_{3} = 1 \\
+		x_{1} + 3x_{2} + 8x_{3} = -1
+	\end{cases}$ 的通解
+\end{ti}
+
+\begin{ti}
+	设 $b_{1}$、$b_{2}$、$b_{3}$ 是互不相同的数, 且 $\balpha_{1} = \bigl(1,b_{1},b_{1}^{2}\bigr)^{\TT},\balpha_{2} = \bigl(1,b_{2},b_{2}^{2}\bigr)^{\TT},\balpha_{3} = \bigl(1,b_{3},b_{3}^{2}\bigr)^{\TT}$, 证明：$\balpha_{1}$、$\balpha_{2}$、$\balpha_{3}$ 线性无关
+\end{ti}
+
+\subsection{2019-2020 9A}
+\subsubsection{选择题}
+\begin{ti}
+	行列式 $\begin{vmatrix} 1 & x & 0 \\ -1 & 1-x & y \\ 0 & -1 & 1-y \end{vmatrix}$ 的值为 \kuo
+	\fourch{$xy$}{1}{$x$}{$y$}
+\end{ti}
+
+\begin{ti}
+	下述论断正确的是 \kuo
+	\onech{如果仅当 $k_1 = k_2 = \cdots = k_r = 0$, 有 $k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_r \alpha_r = 0$, 则 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 线性无关}
+	{若 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 线性相关, 则存在不全为 0 的数 $k_1$, $k_2$, $k_r$, 使得 $k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_r \alpha_r = 0$}
+	{若 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 线性无关, $\beta_1$, $\beta_2$, $\cdots$, $\beta_s$ 线性无关, 则 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$, $\beta_1$, $\beta_2$, $\cdots$, $\beta_s$ 线性无关}
+	{若 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 线性无关, 则 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_{r-1}$ 线性相关}
+\end{ti}
+
+\begin{ti}
+	设 $|A|,|B|$ 均为 $n$ ($n>2$) 阶行列式, 则 \kuo
+	\fourch{$|A+B| = |A| + |B|$}{$|A-B| = |A| - |B|$}{$|A|\cdot|B| = |A\cdot B|$}{$\begin{vmatrix}
+		O & A \\ B & O
+	\end{vmatrix} = |A| \cdot |B|$}
+\end{ti}
+
+\begin{ti}
+	已知 $\alpha_1,\alpha_2,\alpha_3$ 是非齐次线性方程组 $Ax=b$ 的三个不同的解, 则向量组 $\alpha_1-\alpha_2,\alpha_1+\alpha_2-2\alpha_3,\frac{2}{3}(\alpha_2-\alpha_1),\allowbreak\alpha_1-3\alpha_2+2\alpha_3$ 是对应的齐次线性方程组 $Ax=0$ 的解向量共有 \kuo{} 个
+	\fourch{4 个}{3 个}{2 个}{1 个}
+\end{ti}
+
+\begin{ti}
+	已知三阶方阵 $A$ 的三个特征值分别为 $1,2,3$, 则 $\bigl|A^2\bigr| = $ \kuo
+	\fourch{$-6$}{6}{$-36$}{36}
+\end{ti}
+
+\begin{ti}
+	已知 $A = \begin{vmatrix}
+		2 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & x
+	\end{vmatrix}$ 和 $B = \begin{vmatrix}
+		2 & 0 & 0 \\ 0 & y & 0 \\ 0 & 0 & 1
+	\end{vmatrix}$ 相似, 则 \kuo
+	\fourch{$x=0,y=0$}{$x=0,y=1$}{$x=1,y=1$}{$x=1,y=2$}
+\end{ti}
+
+\subsubsection{填空题}
+\begin{ti}
+	设 $\alpha_1,\alpha_2,\alpha_3,\beta_1,\beta_2$ 都是 4 维列向量, 且 4 阶行列式 $|(\alpha_1,\alpha_2,\alpha_3,\beta_1)| = m$, $|(\alpha_1,\alpha_2,\beta_2,\alpha_3)| = n$, 则 4 阶行列式 $|(\alpha_1,\alpha_2,\alpha_3,\beta_1+\beta_2)| = $ \hua
+\end{ti}
+
+\begin{ti}
+	已知 $D$ 为 4 阶行列式, $D$ 的第二行元素依次为 $a_{21} = -2,a_{22} = 1, a_{23} = 0,a_{24} = -2$, 对应的余子式依次为 $M_{21} = 1, M_{22} = 3, M_{23} = 5, M_{24} = 3$, 则 $D = $ \hua
+\end{ti}
+
+\begin{ti}
+	若向量 $\alpha_1 = (a,0,b), \alpha_2 = (1,1,1), \alpha_3 = (1,3,2)$ 线性相关, 则常数 $a,b$ 满足关系式 \hua
+\end{ti}
+
+\begin{ti}
+	矩阵 $A = \begin{bmatrix}
+		1 & 0 \\ 0 & 2
+	\end{bmatrix}$, 则 $A^x + E = $ \hua
+\end{ti}
+
+\begin{ti}
+	$n$ 元齐次方程组 $Ax = 0$ 的系数矩阵的秩为 $n-3$, 则基础解系所含解向量的个数为 \hua
+\end{ti}
+
+\begin{ti}
+	已知向量 $\alpha = (1,2,2,3)', \beta = (3,1,5,2)'$, 则它们的内积 $[\alpha,\beta] = $ \hua
+\end{ti}
+
+\begin{ti}
+	设二阶方阵 $A,B$ 相似, $A$ 的特征值为 $2,3$, 则 $B^{-1}$ 的特征值为 \hua
+\end{ti}
+
+\subsubsection{计算题}
+\begin{ti}
+	计算 4 阶行列式 $\begin{vmatrix}
+		1 & 0 & -1 & 1 \\
+		2 & 5 & 3	 & 1 \\
+		-1 & 7 & 0 & 1 \\
+		1 & 8 & 1 & 1
+	\end{vmatrix}$
+\end{ti}
+
+\begin{ti}
+	求向量组 $\alpha_1 = (-1,1,7,10)^\TT$, $\alpha_2 = (2,1,1,1)^\TT$, $\alpha_3 = (3,1,-1,-2)^\TT$, $\alpha_4 = (8,5,9,11)^\TT$ 的秩以及它的一个最大无关组
+\end{ti}
+
+\begin{ti}
+	求矩阵 $X$ 满足 $\begin{bmatrix}
+		1 & 1 & -1 \\
+		-2 & 1 & 1 \\
+		1 & 1 & 1
+	\end{bmatrix} X = \begin{bmatrix}
+		2 \\ 3 \\ 6
+	\end{bmatrix}$
+\end{ti}
+
+\begin{ti}
+	求线性方程组 $\begin{cases}
+		2x_1 + x_2 - x_3 = 1 \\
+		x_1 - x_2 + x_3 = 2 \\
+		4x_1 + 3x_2 - 3x_3 = -1
+	\end{cases}$ 的通解
+\end{ti}
+
+\begin{ti}
+	求矩阵 $A = \begin{bmatrix}
+		-2 & 0 & 0 \\
+		0 & 1 & 0 \\
+		1 & 1 & 4
+	\end{bmatrix}$ 的特征值和特征向量
+\end{ti}
+
+\subsubsection{证明题}
+\begin{ti}
+	已知 $\alpha_1,\alpha_2,\alpha_3$ 是 $Ax=0$ 的一个基础解系, 证明：$\beta_1 = \alpha_1,\beta_2 = \alpha_1 + 2\alpha_2, \beta_3 = 2\alpha_3 + \alpha_2$ 也是该方程组的一个基础解系
+\end{ti}
+
+\section{春}
+\subsection{2017-2018}
+\subsubsection{选择题}
+\begin{ti}
+	行列式 $\begin{vmatrix}
+		2 & 1 & 1 & 1 \\
+		1 & 2 & 1 & 1 \\
+		1 & 1 & 2 & 1 \\
+		1 & 1 & 1 & 2
+	\end{vmatrix}$ 的值为 \kuo
+	\fourch{$-5$}{$5$}{$9$}{$-9$}
+\end{ti}
+
+\begin{ti}
+	齐次线性方程组 $\begin{cases}
+		2x_{1} + 3x_{2} + 4x_{3} - 5x_{4} = 0 \\
+		x_{2} - 2x_{3} - 3x_{4} = 0
+	\end{cases}$ 的基础解系中含有解向量的个数是 \kuo
+	\fourch{$2$}{$1$}{$3$}{$4$}
+\end{ti}
+
+\begin{ti}
+	设 $\bA,\bB,\bC$ 均为 $n$ 阶方阵, 若由 $\bA \bB = \bA \bC$ 能推出 $\bB = \bC$, 则 $\bA$ 应满足下列条件中 \kuo
+	\fourch{$\bA = \symbfit 0$}{$\bA \ne \symbfit 0$}{$\bA$ 不可逆}{$\bA$ 可逆}
+\end{ti}
+
+\begin{ti}
+	若向量组 $\balpha_{1} = (1,2,0),\balpha_{2} = (2,1,3),\balpha_{3} = (t,2,-1)$ 线性相关, 则 $t$ 的值为 \kuo
+	\fourch{$\frac{1}{2}$}{$-\frac{1}{2}$}{$1$}{$-1$}
+\end{ti}
+
+\begin{ti}
+	设 $0$ 是矩阵 $\bA = \begin{pmatrix}
+		1 & 0 & 2 \\
+		0 & 3 & 2 \\
+		1 & 0 & a
+	\end{pmatrix}$ 的特征值, 则 $a = $ \kuo
+	\fourch{$1$}{$-1$}{$2$}{$-2$}
+\end{ti}
+
+\begin{ti}
+	设三阶方阵 $\bA$ 的三个特征值为 $1,2,3$, 则 $\bA^{\astt}$ 的三个特征值为 \kuo
+	\fourch{$6,12,36$}{$6,3,2$}{$1,\frac{1}{2},\frac{1}{3}$}{$36,18,12$}
+\end{ti}
+
+\subsubsection{填空题}
+\begin{ti}
+	已知下三角行列式 $\bD$ 的主对角线上有一个元素为零, 则 $\bD = $ \hua
+\end{ti}
+
+\begin{ti}
+	已知 $\bD$ 为四阶行列式, $\bD$ 的第 $4$ 行元素依次为 $a_{41} = -3, a_{42} = 0, a_{43} = -2, a_{44} = 2$, 对应的余子式依次为 $M_{41} = 1, M_{42} = 7, M_{43} = 1, M_{44} = 3$, 则 $\bD = $ \hua
+\end{ti}
+
+\begin{ti}
+	当 $m$ \hua{} (填“$>$”或“$<$”) $n$ 时, $n$ 个 $m$ 维向量组成的向量组一定线性相关
+\end{ti}
+
+\begin{ti}
+	设 $\bA = \begin{pmatrix}
+		1 & -1 & 1 \\
+		1 & 1 & -1
+	\end{pmatrix}, \bB = \begin{pmatrix}
+		1 & 2 & 3 \\
+		-1 & -2 & 4
+	\end{pmatrix}$, 则 $\bA + 3 \bB = $ \hua
+\end{ti}
+
+\begin{ti}
+	若 $n$ 元齐次线性方程组 $\bA \symbfit x = \symbfit 0$ 有唯一零解的充要条件为 \hua
+\end{ti}
+
+\begin{ti}
+	向量 $(0,0,1,1)^{\TT}$ 与 $(1,0,-1,1)^{\TT}$ 的夹角为 \hua
+\end{ti}
+
+\begin{ti}
+	$(\lambda \bE - \bA) \symbfit x = \symbfit 0$ 的非零解向量都是 $\bA$ 的属于 \hua{} 的特征向量
+\end{ti}
+
+\subsubsection{计算题}
+\begin{ti}[10 分]
+	计算 $4$ 阶行列式 $\begin{bmatrix}
+		2 & -2 & 0 & 0 \\
+		0 & 2 & -2 & 0 \\
+		0 & 0 & 2 & -2 \\
+		-2 & 0 & 0 & 2
+	\end{bmatrix}$
+\end{ti}
+
+\begin{ti}[10 分]
+	已知矩阵 $\bA = \begin{pmatrix}
+		2 & 3 & 0 & 0 \\
+		-1 & 2 & 0 & 0 \\
+		0 & 0 & 7 & 2 \\
+		0 & 0 & 3 & 1
+	\end{pmatrix}$, 利用分块法求 $\bA$ 的逆矩阵
+\end{ti}
+
+\begin{ti}[10 分]
+	求向量组 $\balpha_{1} = (1,2,3,0)^{\TT}, \balpha_{2} = (-1,-2,0,3)^{\TT}, \balpha_{3} = (2,4,6,0)^{\TT}, \balpha_{4} = (1,-2,-1,0)^{\TT}, \balpha_{5} = (0,2,\allowbreak 4,2)^{\TT}$ 的秩及向量组的一个最大无关组
+\end{ti}
+
+\begin{ti}[13 分]
+	求矩阵 $\bA = \begin{pmatrix}
+		3 & 2 & 0 \\
+		2 & 3 & 0 \\
+		0 & 0 & 2
+	\end{pmatrix}$ 的特征值和特征向量
+\end{ti}
+
+\begin{ti}[12 分]
+	求线性方程组 $\begin{cases}
+		2x_{1} + 5x_{2} + 2x_{3} = 2 \\
+		x_{1} + 2x_{2} - x_{3} = 3 \\
+		-x_{1} - x_{2} + 5x_{3} = -7
+	\end{cases}$ 的通解（要求用它的一个特解和对应的齐次线性方程组的基础解系表示）
+\end{ti}
+
+\subsubsection{证明题（6 分）}
+已知 $\balpha_{1},\balpha_{2},\balpha_{3},\balpha_{4}$ 是 $\bA \symbfit x = \symbfit 0$ 的一个基础解系, 证明 $\bbeta_{1} = \balpha_{1}, \bbeta_{2} = \balpha_{1} + 2\balpha_{2}, \bbeta_{3} = \balpha_{1} + 2\balpha_{3}, \bbeta_{4} = \balpha_{1} + 2\balpha_{4}$ 也是该方程组的一个基础解系
+
+\section{难度与考试近似的题}
+\subsubsection{填空题}
+\begin{ti}
+	已知 $n$ 阶矩阵 $\bA$ 各列元素之和为 $0$, 则 $|\bA| = $ \hua
+\end{ti}
+
+\begin{ti}
+	三阶方阵 $\bA$ 的行列式为 $2$, 则 $|\bA^{\astt}| = $ \hua{}；$\bigl|\bA^{-1} + \bA^{\astt}\bigr| = $ \hua
+\end{ti}
+
+\begin{ti}
+	齐次线性方程组 $\begin{cases}
+		x_{1} + 2x_{3} = 0 \\
+		2x_{2} - x_{4} = 0 \\
+		x_{3} - x_{4} = 0
+	\end{cases}$ 基础解系为 \hua
+\end{ti}
+
+\begin{ti}
+	已知三阶方阵 $\bA$ 的特征值为 $1,2,3$, 则 $\bB = 3 \bE - 2 \bA$ 的特征值为 \hua
+\end{ti}
+
+\begin{ti}
+	已知 $\bA = \begin{pmatrix}
+		5 & 1 & 0 \\
+		4 & 1 & 0 \\
+		0 & 0 & 4
+	\end{pmatrix}$, 则 $\bA^{-1} = $ \hua
+\end{ti}
+
+\begin{ti}
+	若向量组 (1) 与向量组 (2) 可以相互线性表示, 则称向量组 (1) 与向量组 (2) \hua
+\end{ti}
+
+\begin{ti}
+	设 $\bA,\bB$ 均为 $n$ 阶矩阵, 且 $\bB$ 为可逆矩阵, 若 $\bA \bB = \bB$, 则 $\bA = $ \hua
+\end{ti}
+
+\subsubsection{选择题}
+\begin{ti}
+	设方阵 $\bA = \begin{pmatrix}
+		a & b \\
+		c & d
+	\end{pmatrix} (ad - bc \ne 0)$, 则 $\bA^{-1}$ 为 \kuo
+	\fourch{$\frac{1}{ad - bc}\begin{pmatrix}
+		d & -b \\
+		-c & a
+	\end{pmatrix}$}{$\frac{1}{bc - ad}\begin{pmatrix}
+		d & -b \\
+		-c & a
+	\end{pmatrix}$}{$\frac{1}{ad - bc}\begin{pmatrix}
+		-c & b \\
+		d & -a
+	\end{pmatrix}$}{$\frac{1}{bc - ad}\begin{pmatrix}
+		d & -a \\
+		-b & c
+	\end{pmatrix}$}
+\end{ti}
+
+\begin{ti}
+	向量组 $\balpha_{1} = (0,0,1,2,-1)^{\TT}, \balpha_{2} = (1,3,-2,2,-1)^{\TT}, \balpha_{3} = (2,6,-4,5,7)^{\TT}, \balpha_{4} = (-1,-3,4,0,-19)^{\TT}$ 的秩为 \kuo
+	\fourch{1}{2}{3}{4}
+\end{ti}
+
+\begin{ti}
+	设 $\bA$、$\bB$ 均为 $n$ 阶非零矩阵, 且 $\bA \bB = \symbfit 0$, 则 $\bA$ 和 $\bB$ 的秩 \kuo
+	\twoch{必有一个等于 $0$}{都小于 $n$}{一个小于 $n$, 一个等于 $n$}{都等于 $n$}
+\end{ti}
+
+\begin{ti}
+	对方程组 $\begin{cases}
+		x_{1} - 2x_{2} + x_{3} = 1 \\
+		-2x_{1} + 4x_{2} - 2x_{3} = 2
+	\end{cases}$, \kuo{} 成立
+	\fourch{有唯一解}{有两个解}{有无穷解}{无解}
+\end{ti}
+
+\begin{ti}
+	设 $\bA$ 为正交阵, 则 $\bA^{-1}$ 为 \kuo
+	\fourch{对称阵}{单位阵}{正交阵}{对角阵}
+\end{ti}
+
+\subsubsection{计算题}
+\begin{ti}[8 分]
+	计算行列式 $D = \begin{vmatrix}
+		1 & 1 & 1 & 0 \\
+		2 & 1 & -1 & 1 \\
+		1 & 2 & -1 & 1 \\
+		0 & 1 & 2 & 3
+	\end{vmatrix}$
+\end{ti}
+
+\begin{ti}[10 分]
+	求解矩阵方程 $\bX \bA = \bB$, 其中 $\bA = \begin{pmatrix}
+		2 & 1 & -1 \\
+		2 & 1 & 0 \\
+		1 & -1 & 1
+	\end{pmatrix}, B = \begin{pmatrix}
+		1 & -1 & 3 \\
+		4 & 3 & 2
+	\end{pmatrix}$
+\end{ti}
+
+\begin{ti}[10 分]
+	求解非齐次线性方程组 $\begin{cases}
+		x_{1} - x_{2} + x_{3} = 1 \\
+		2x_{1} - 2x_{2} + 5x_{3} = 2 \\
+		2x_{1} + x_{2} + 12x_{3} = 0
+	\end{cases}$
+\end{ti}
+
+\begin{ti}[12 分]
+	求行向量组 $\balpha_{1} = (1,3,4,-2), \balpha_{2} = (2,1,3,-1), \balpha_{3} = (3,-1,2,0), \balpha_{4} = (4,-3,1,1)$ 的秩及一个极大无关组, 且求出其余向量由这一极大无关组线性表示的表达式
+\end{ti}
+
+\begin{ti}[13 分]
+	设 $\bA = \begin{pmatrix}
+		3 & -4 & -4 \\
+		0 & 2 & 0 \\
+		2 & -2 & -3
+	\end{pmatrix}$, 求一可逆矩阵 $\symbfit P$, 使 $\symbfit P^{-1} \bA \symbfit P = \symbfit \varLambda$ 为对角阵
+\end{ti}
+
+\subsubsection{证明题（本题 8 分）}
+设 $\lambda_{1}$、$\lambda_{2}$ 是方阵 $\bA$ 的特征值, 对应的特征向量分别为 $\symbfit p_{1}$、$\symbfit p_{2}$, 证明：若 $\lambda_{1} \ne \lambda_{2}$, 则 $\symbfit p_{1} + \symbfit p_{2}$ 不会是 $\bA$ 的特征向量
+
+\newpage
+\guanggao
